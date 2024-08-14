@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Villa Julia</title>
+<meta name="robots" content="index,follow">
+<meta name="description" id="description" property="description" content="Villa Julia">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<style>
+
+@font-face {
+  font-family: 'BlackmoorCom'; /* Nom que vous donnerez à la police */
+  src: url('BlackmoorCom/BlackmoorCom.woff2') format('woff2'), /* Chemin vers la police */
+       url('BlackmoorCom/BlackmoorCom.woff') format('woff'), /* Fournir plusieurs formats pour une meilleure compatibilité */
+       url('BlackmoorCom/BlackmoorCom.ttf') format('truetype');
+  font-weight: normal; /* Poids de la police */
+  font-style: normal; /* Style de la police */
+}
+
+:root {
+--beige: rgb(252, 236, 217);
+--beige2: rgb(255, 232, 206);
+--bleu: rgb(255, 232, 206);
+}
+
+body, html {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif;
+margin: 0;
+padding: 0;
+width:100%;
+height: 100%;
+background:var(--beige);
+line-height:0;
+}
+a {text-decoration:none; color:white;}
+
+h1 {font-family: 'BlackmoorCom', Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; text-transform:uppercase; font-size:50px;  color:rgb(100,38,1); letter-spacing:4px; word-spacing:5px; line-height:120%; padding:0; margin:0 0 25px 0; }
+
+.photobg {position:relative; margin:0; width:50%; height:100vh; display:inline-block;  font-size:0; line-height:0; background-position: center; background-repeat: no-repeat; background-size: cover;}
+.bloc {position:relative; margin:0; width:50%; height:100vh; display:inline-block;  font-size:0; line-height:0; text-align:center;}
+.contenu {  margin:0 auto; width:500px; font-size:20px; color: rgb(100,38,1); line-height:1.4em; }
+.contenu img { width:200px; margin-bottom:15px;  }
+.mobile {display:none;}
+
+@media screen and (min-width: 750px) {
+  .contenu {position:absolute; left:50%; top: 50%; transform: translateX(-50%) translateY(-50%) ;}
+}
+
+@media screen and (max-width: 1150px) {.contenu {width:400px;}}
+@media screen and (max-width: 950px) {.contenu {width:300px;}}
+
+@media screen and (max-width: 750px) {
+  .photobg {width:100%; height:100vh;}
+  .bloc {width:100%; height:auto; padding:0; margin:0; }
+  .contenu {width:calc(100% - 50px); padding:50px 25px; margin:0; }
+  .pc {display:none;}
+  .mobile {display:block;}
+}
+
+.btn {display:inline-block; background:rgb(100,38,1); color:white; padding:10px 20px; border-radius:10px; }
+.btn:hover {background:rgb(110, 54, 22);}
+
+#accueil .btn {margin-top:20px;}
+
+#menu {z-index:100; width:100%; background:rgb(0, 69, 92); padding:25px 0; color:white; font-weight:400; font-size:18px; text-align:center; }
+#menu div, #menu a {margin:1px 10px; vertical-align:middle; display:inline-block; }
+#menu span:hover, #menu a:hover {cursor:pointer; /*border-bottom:solid 2px white;*/ text-decoration:underline;  }
+
+#accueil .titre {/*font-size:60px; line-height:100%; margin:0; padding:0; margin-bottom:15px;*/}
+
+#appartements { color:rgb(100,38,1); width:calc(100% - 80px); background:var(--beige2); text-align:center; padding:100px 40px; font-size:18px; line-height:125%;  }
+#appartements a {color:rgb(100,38,1); }
+#appartements .appartement {width:200px; margin:40px; display:inline-block;}
+#appartements .appartement .photo {width:100%; border-radius:5px; height:250px; background:grey; margin-bottom:15px; background-position: center; background-repeat: no-repeat; background-size: cover; }
+#appartements .appartement .titre {margin-bottom:5px; font-weight:600;}
+#appartements .appartement .soustitre {margin-bottom:15px;}
+
+@media screen and (max-width: 700px) {
+#appartements {width:100%;padding:50px 0;}
+#appartements .appartement {width:calc(50% - 40px); margin:30px 10px; padding:0;}
+}
+
+#contact {background:rgb(0, 69, 92); color:white; text-align:center; padding:100px 0; }
+#contact .texte{width:500px;  display:inline-block; vertical-align:top; text-align:left; margin-right:20px;  }
+#contact iframe{width:500px; border-radius:10px; margin:0 0 0 20px; }
+#contact h1 {margin-top:0; padding-top:0; color:white; }
+#contact p {font-weight:300; font-size:20px; line-height:145%; margin-bottom:40px; }
+#contact h3 {line-height:145%; font-size:23px;}
+
+@media screen and (max-width: 1200px) {
+  #contact .texte {display:block; margin:0 auto 50px auto; }
+  #contact iframe {margin:0; }
+}
+
+@media screen and (max-width: 650px) {
+  #contact {padding:50px 0;}
+  #contact .texte {margin:25px; width:calc(100% - 50px);}
+  #contact iframe {margin:25px; width:calc(100% - 50px); }
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+<!-- --------------------------------------------------------------- -->
+
+
+<div id="menu">
+<a href="#villajulia">Villa Julia</a>
+<a href="#appartements">Appartements</a>
+<a href="#contact">Contact</a>
+<div>FR</div>
+</div>
+
+
+<!-- --------------------------------------------------------------- -->
+
+<div id="accueil">
+<div class="photobg" style="background-image:url('facade-light.jpg');  "></div><!--
+--><div id="villajulia" class="bloc">
+
+<div class="contenu">
+<!--img src="logo.png"-->
+<h1 class="titre">Villa Julia</h1>
+<p>Si vous souhaitez vous éloigner du trafic routier et partir de la pollution en ville, passer du temps avec vos proches, profiter de la beauté du paysage rural et, en même temps améliorer votre santé, nous vous invitons dans nos appartements confortables à Capvern les Bains en plein cœur de Hautes Pyrénées.</p>
+<a class="btn" href="#appartements">Découvrir les appartements</a>
+</div>
+
+</div>
+</div><!--
+
+
+ --------------------------------------------------------------- 
+
+
+
+--><div id="appartements">
+
+
+<h1>Nos appartements</h1>
+
+
+<a href="">
+<div class="appartement">
+<div class="photo" style="background-image:url('apt1.jpg');  "></div>
+<div class="titre">Appartement 1</div>
+<div class="soustitre">Jusqu'à 3 personnes</div>
+<div class="btn">Voir les prix</div>
+</div>
+</a>
+
+
+<a href="">
+<div class="appartement">
+<div class="photo" style="background-image:url('apt2.jpg');  "></div>
+<div class="titre">Appartement 2</div>
+<div class="soustitre">Jusqu'à 2 personnes</div>
+<div class="btn">Voir les prix</div>
+</div>
+</a>
+
+
+<a href="">
+<div class="appartement">
+<div class="photo" style="background-image:url('apt3.jpg');  "></div>
+<div class="titre">Appartement 3</div>
+<div class="soustitre">Jusqu'à 3 personnes</div>
+<div class="btn">Voir les prix</div>
+</div>
+</a>
+
+
+<a href="">
+<div class="appartement">
+<div class="photo" style="background-image:url('apt4.jpg');  "></div>
+<div class="titre">Appartement 4</div>
+<div class="soustitre">Jusqu'à 3 personnes</div>
+<div class="btn">Voir les prix</div>
+</div>
+</a>
+
+
+<a href="">
+<div class="appartement">
+<div class="photo" style="background-image:url('apt5.jpg');  "></div>
+<div class="titre">Appartement 5</div>
+<div class="soustitre">Jusqu'à 2 personnes</div>
+<div class="btn">Voir les prix</div>
+</div>
+</a>
+
+
+<a href="">
+<div class="appartement">
+<div class="photo" style="background-image:url('apt6.jpg');  "></div>
+<div class="titre">Appartement 6</div>
+<div class="soustitre">Jusqu'à 2 personnes</div>
+<div class="btn">Voir les prix</div>
+</div>
+</a>
+
+
+
+</div>
+
+
+
+
+<!-- --------------------------------------------------------------- -->
+
+
+
+<div class="bloc">
+
+<div class="contenu" style="text-align:left;">
+
+<h1>Jardin privé</h1>
+<p>Nous vous proposons :</p>
+<ul>
+<li>6 appartements T2 entièrement équipés</li> 
+<li>Emplacement à côté un bar/épicerie</li>
+<li>400 m des Thermes (arrêt de la navette thermale gratuite est en face)</li>
+<li>Jardin privé </li>
+</ul>       
+<p>Excellent emplacement à proximité des attractions et des plus beaux endroits</p>
+<p>Venez découvrir. Notre équipe est à votre service 🫶</p>
+</div>
+
+</div><!--
+--><div class="photobg" style="background-image:url('jardin-light.jpg'); background-position: top;  "></div><!--
+
+
+
+---------------------------------------------------------------
+
+
+--><div class="bloc mobile">
+
+  <div class="contenu">
+    <h1>Nos terrasses</h1>
+<p>Nos terrasses ont un charme particulier !</p> 
+<p>Si vous vous levez tôt le matin, vous pouvez préparer une tasse de café aromatique, sortir sur la terrasse et profiter du moment en écoutant les oiseaux chanter !</p>                    
+<p>Que faut-il d’autre pour être heureux ?</p>
+</div>
+
+</div>
+</div><!--
+
+
+--><div class="photobg" style="background-image:url('terrasse-light.jpg');"></div><!--
+
+--><div class="bloc pc">
+
+<div class="contenu">
+    <h1>Nos terrasses</h1>
+<p>Nos terrasses ont un charme particulier !</p> 
+<p>Si vous vous levez tôt le matin, vous pouvez préparer une tasse de café aromatique, sortir sur la terrasse et profiter du moment en écoutant les oiseaux chanter !</p>                    
+<p>Que faut-il d’autre pour être heureux ?</p>
+</div>
+
+</div>
+</div><!--
+
+
+ --------------------------------------------------------------- 
+
+
+--><div class="bloc">
+
+<div class="contenu" style="text-align:left;">
+
+<h1>Eau thermale</h1>
+
+<p>L’eau thermale unique de Capvern, naturellement pure et réputée pour ses vertus thérapeutiques, a fait de la station la «capitale du rein».</p>
+
+<p>Tout est fait pour votre santé :</p>
+
+<ul>
+<li>Affectations de l’appareil digestif</li>
+<li>Maladies de l’appareil urinaire</li>
+<li>Maladies métaboliques</li>
+<li>Rhumatologie</li>
+</ul>
+
+<p>Et une ambiance festive accompagnée de différentes animations tout au long de votre séjour.</p> 
+
+
+</div>
+
+</div><!--
+--><div class="photobg" style="background-image:url('thermes-light.jpg');  "></div><!--
+
+
+ --------------------------------------------------------------- 
+
+
+--><div id="contact">
+
+<div class="texte">
+<h1>Contact</h1>
+<p>Merci de l'intérêt que vous pourtez à la Villa Julia. Veuillez choisir l'une des options ci-dessous.</p>
+
+<h3>
+28 Rue des Thermes<br>
+65130 Capvern<br>
+France<br>
+<br>
++33 5 62 39 19 56<br>
+contact@villa-julia.fr
+</h3>
+</div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d182.0144920058703!2d0.308665!3d43.120655000000006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a84b0012371f8b%3A0x85b29ae67cb67532!2sVilla%20Julia!5e0!3m2!1sen!2sch!4v1723615056242!5m2!1sen!2sch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+
+<!-- --------------------------------------------------------------- -->
+
+
+
+<script>
+
+</script>
+
+
+</body>
+</html>
