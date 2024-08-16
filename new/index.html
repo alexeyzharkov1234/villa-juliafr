@@ -68,9 +68,13 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 #menu div, #menu a {margin:1px 10px; vertical-align:middle; display:inline-block; }
 #menu span:hover, #menu a:hover {cursor:pointer; /*border-bottom:solid 2px white;*/ text-decoration:underline;  }
 
-#accueil h1 {font-family: 'BlackmoorCom', Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; text-transform:uppercase; font-size:50px;  letter-spacing:4px; word-spacing:5px; margin-bottom:25px;}
+#accueil h1 {font-family: 'BlackmoorCom', Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; text-transform:uppercase; font-size:50px;  letter-spacing:4px; word-spacing:5px; margin-bottom:25px; text-align:center;}
 #accueil .contenu {font-size:17px;}
 #accueil .btn {margin-top:20px; font-size:18px;}
+
+@media screen and (max-width: 700px) {
+#accueil h1 {font-size:45px;}
+}
 
 #appartements { color:var(--marron); width:calc(100% - 80px); background:var(--beige2); text-align:center; padding:100px 40px; font-size:18px; line-height:125%;  }
 #appartements a {color:var(--marron); }
