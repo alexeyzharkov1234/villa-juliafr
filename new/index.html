@@ -44,6 +44,10 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 .contenu img { width:200px; margin-bottom:15px;  }
 .mobile {display:none;}
 
+/* slider */
+.slider .precedent {position:absolute; top:calc(50% - 25px); left:5px; width:50px; cursor:pointer; }
+.slider .suivant {position:absolute; top:calc(50% - 25px); right:5px; width:50px; cursor:pointer; }
+
 @media screen and (min-width: 750px) {
   .contenu {position:absolute; left:50%; top: 50%; transform: translateX(-50%) translateY(-50%) ;}
 }
@@ -68,27 +72,30 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 #menu div, #menu a {margin:1px 10px; vertical-align:middle; display:inline-block; }
 #menu span:hover, #menu a:hover {cursor:pointer; /*border-bottom:solid 2px white;*/ text-decoration:underline;  }
 
+#accueil {text-align:center;}
 #accueil h1 {font-family: 'BlackmoorCom', Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; text-transform:uppercase; font-size:50px;  letter-spacing:4px; word-spacing:5px; margin-bottom:25px; text-align:center;}
 #accueil .contenu {font-size:17px;}
 #accueil .btn {margin-top:20px; font-size:18px;}
+#accueil p, ul {text-align:left;}
 
 @media screen and (max-width: 700px) {
 #accueil h1 {font-size:45px;}
 }
 
-#appartements { color:var(--marron); width:calc(100% - 80px); background:var(--beige2); text-align:center; padding:100px 40px; font-size:18px; line-height:125%;  }
+#appartements { color:var(--marron); width:calc(100% - 80px); background:var(--beige2); text-align:center; padding:80px 40px; font-size:18px; line-height:125%;  }
 #appartements a {color:var(--marron); }
 #appartements .appartement {width:200px; margin:40px; display:inline-block;}
-#appartements .appartement .photo {width:100%; border-radius:5px; height:250px; background:var(--marron); margin-bottom:15px; background-position: center; background-repeat: no-repeat; background-size: cover; }
+#appartements .appartement .photo {width:200px; height:200px; border-radius:50%; background:var(--marron); margin-bottom:15px; background-position: center; background-repeat: no-repeat; background-size: cover; }
 #appartements .appartement .titre {margin-bottom:5px; font-weight:600;}
 #appartements .appartement .soustitre {margin-bottom:15px;}
 
 @media screen and (max-width: 700px) {
 #appartements {width:100%;padding:50px 0;}
-#appartements .appartement {width:calc(50% - 40px); margin:30px 10px; padding:0;}
+#appartements .appartement {width:calc(50% - 40px); margin:30px 10px; padding:0; }
+#appartements .appartement .photo {border-radius:10px; width:100%; height:250px; /*width:150px; height:150px; margin: 0 auto 15px auto;*/} 
 }
 
-#contact {background:var(--bleu); color:white; text-align:center; padding:100px 0; }
+#contact {background:var(--marron); color:white; text-align:center; padding:80px 0; }
 #contact .texte{width:500px;  display:inline-block; vertical-align:top; text-align:left; margin-right:20px;  }
 #contact iframe{width:500px; border-radius:10px; margin:0 0 0 20px; }
 #contact h1 {margin-top:0; padding-top:0; color:white; }
@@ -127,10 +134,10 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 <!-- --------------------------------------------------------------- -->
 
 <div id="accueil">
-<div class="photobg" style="background-image:url('entree.jpg');  "></div><!--
+<div id="slider-accueil" class="photobg slider"></div><!--
 --><div id="villajulia" class="bloc">
 
-<div class="contenu" style="text-align:left;">
+<div class="contenu">
 <!--img src="logo.png"-->
 <h1>Villa Julia</h1>
 <p>Si vous souhaitez vous éloigner du trafic routier et partir de la pollution en ville, passer du temps avec vos proches, profiter de la beauté du paysage rural et, en même temps améliorer votre santé, nous vous invitons dans nos appartements confortables à Capvern les Bains en plein cœur de Hautes Pyrénées.</p>
@@ -241,7 +248,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 </div>
 
 </div><!--
---><div class="photobg" style="background-image:url('jardin-light.jpg'); background-position: top;  "></div><!--
+--><div class="photobg" style="background-image:url('jardin.jpg'); background-position: top;  "></div><!--
 
 
 
@@ -261,7 +268,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 </div><!--
 
 
---><div class="photobg" style="background-image:url('terrasse-light.jpg');"></div><!--
+--><div class="photobg" style="background-image:url('terrasse.jpg');"></div><!--
 
 --><div class="bloc pc">
 
@@ -302,7 +309,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 </div>
 
 </div><!--
---><div class="photobg" style="background-image:url('thermes-light.jpg');  "></div><!--
+--><div class="photobg" style="background-image:url('thermes.jpg');  "></div><!--
 
 
  --------------------------------------------------------------- 
@@ -334,6 +341,61 @@ contact@villa-julia.fr
 
 
 <script>
+
+// slider accueil ---------------------------------------------------------------------------------
+const tableau_accueil = [
+'url(facade.jpg)',
+'url(entree.jpg)',
+'url(jardin.jpg)',
+'url(terrasse.jpg)',
+];
+
+
+let index_accueil = 0;
+const slider_accueil = document.getElementById('slider-accueil');
+
+function slider_suivant() {
+slider_accueil.style.backgroundImage = tableau_accueil[index_accueil];
+index_accueil = (index_accueil + 1) % tableau_accueil.length;
+}
+
+function slider_precedent() {
+slider_accueil.style.backgroundImage = tableau_accueil[index_accueil];
+index_accueil = (index_accueil - 1) % tableau_accueil.length;
+}
+
+slider_suivant();
+let interval_slider = setInterval(slider_suivant, 3000);
+
+slider_accueil.addEventListener('click', function(event) {
+  clearInterval(interval_slider);
+  if (event.target.classList.contains('suivant')) {
+    slider_suivant();
+  }
+  if (event.target.classList.contains('precedent')) {
+    slider_precedent();
+  }
+});
+
+
+// boutons sliders -------------------------------------------------------------------------------
+document.querySelectorAll('.slider').forEach(slider => {
+slider.innerHTML += '<img class="precedent" src="precedent.svg"><img class="suivant" src="suivant.svg">';
+});
+
+
+
+// photos ----------------------------------------------------------------------------
+/*
+const tableau = [
+{"id":"accueil", "index":0, "photos":['url(facade.jpg)', 'url(entree.jpg)', 'url(jardin.jpg)']},
+{"id":"test", "index":0, "photos":['url(facade.jpg)', 'url(entree.jpg)', 'url(jardin.jpg)']}
+];
+
+const element = document.querySelector('[data-slider="accueil"]');
+
+for (i=0; i<tableau.length; i++) {console.log(tableau[i].id);}
+*/
 
 </script>
 
