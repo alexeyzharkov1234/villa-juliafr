@@ -350,18 +350,22 @@ const tableau_accueil = [
 'url(terrasse.jpg)',
 ];
 
+console.log(tableau_accueil[3]);
+
 
 let index_accueil = 0;
 const slider_accueil = document.getElementById('slider-accueil');
 
 function slider_suivant() {
+index_accueil += 1;
+if (index_accueil >= tableau_accueil.length) {index_accueil = 0;}
 slider_accueil.style.backgroundImage = tableau_accueil[index_accueil];
-index_accueil = (index_accueil + 1) % tableau_accueil.length;
 }
 
 function slider_precedent() {
+index_accueil -= 1;
+if (index_accueil < 0) {index_accueil = tableau_accueil.length-1; }
 slider_accueil.style.backgroundImage = tableau_accueil[index_accueil];
-index_accueil = (index_accueil - 1) % tableau_accueil.length;
 }
 
 slider_suivant();
