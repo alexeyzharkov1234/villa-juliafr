@@ -93,8 +93,9 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 #reserver .appartement .titre {margin-bottom:5px; font-weight:600;}
 #reserver .appartement .soustitre {margin-bottom:15px;}
 #reserver .btn {font-size:18px;}
-#reserver #total {display:inline-block; background:var(--beige); border:solid 1px var(--marron); border-radius:10px; margin-top:20px; padding: 10px 20px 20px 25px; }
-#reserver #devise {margin-right:10px; }
+#reserver #total {display:inline-block; background:var(--beige); border:solid 1px var(--marron); border-radius:10px; margin-top:20px; padding: 20px 20px 20px 30px; }
+#reserver #total #devise {margin-right:10px; }
+#reserver #total .titre {/*font-size:25px;*/ font-weight:900; margin-right:20px;}
 
 @media screen and (max-width: 700px) {
 #reserver {width:100%;padding:50px 0;}
@@ -290,8 +291,10 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 
 <div id="total">
-<h3>Total</h3>
-<span id="montant">320</span> <span id="devise">EUR</span>  <div class="btn">Payer</div>
+<span class="titre">Total</span>
+<span id="montant">320</span>
+<span id="devise">EUR</span>  
+<div class="btn">Payer</div>
 </div>
 
 
