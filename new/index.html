@@ -103,20 +103,22 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 
 /* calendrier */
-#calendrier { text-align:left; background:var(--beige); border:solid 1px var(--marron); margin:5px auto; padding:20px 10px; border-radius:10px; display:none; position:relative; width:350px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+#calendrier { text-align:left; background:var(--beige); border:solid 1px var(--marron); margin:5px auto; padding:20px 10px 10px 10px; border-radius:10px; display:none; position:relative; width:280px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
 
 #calendrier #mois {text-transform:capitalize; text-align:center; font-weight:900; margin:0 10px 20px 10px;}
 #calendrier #mois-precedent, #calendrier #mois-suivant { cursor:pointer;  }
-#calendrier #mois-precedent {position:absolute; top:20px; left:50px;}
-#calendrier #mois-suivant {position:absolute; top:20px; right:50px;}
+#calendrier #mois-precedent {position:absolute; top:20px; left:20px;}
+#calendrier #mois-suivant {position:absolute; top:20px; right:20px;}
 
-#calendrier .semaine {width:50px; height:25px; display:inline-block; text-align:center;}
+#calendrier .semaine {width:40px; height:25px; display:inline-block; text-align:center;}
 #calendrier #espace {height:30px; display:none; vertical-align:middle; }
 
-#calendrier .date {width:50px; padding:7px 0; display:inline-block; text-align:center; font-weight:900; opacity:0.25; }
+#calendrier .date {width:40px; padding:7px 0; display:inline-block; text-align:center; font-weight:900; opacity:0.25; }
 
 #calendrier .noir {opacity:1;  }
 #calendrier .noir:hover{background:rgba(0,0,0,0.05); border-radius:10px; cursor:pointer; }
+
+#calendrier .btn {width:calc(100% - 50px); margin-top:20px;}
 
 
 
@@ -216,6 +218,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
   <div id="mois-suivant">></div>
   <div id="semaine"></div>
   <div id="dates"></div>
+  <div id="bouton-reserver" class="btn">Enregistrer</div>
   </div>
 
 
@@ -477,12 +480,12 @@ let dernierjour = new Date(date.getFullYear(), date.getMonth() + 1, 0);
 
 let espace = document.createElement('div');
 espace.id = "espace";
-if (premierjour.getDay() === 2) { espace.style.cssText = 'display:inline-block; width:50px;'; }
-if (premierjour.getDay() === 3) { espace.style.cssText = 'display:inline-block; width:100px;'; }
-if (premierjour.getDay() === 4) { espace.style.cssText = 'display:inline-block; width:150px;'; }
-if (premierjour.getDay() === 5) { espace.style.cssText = 'display:inline-block; width:200px;'; }
-if (premierjour.getDay() === 6) { espace.style.cssText = 'display:inline-block; width:250px;'; }
-if (premierjour.getDay() === 0) { espace.style.cssText = 'display:inline-block; width:300px;'; }
+if (premierjour.getDay() === 2) { espace.style.cssText = 'display:inline-block; width:40px;'; }
+if (premierjour.getDay() === 3) { espace.style.cssText = 'display:inline-block; width:80px;'; }
+if (premierjour.getDay() === 4) { espace.style.cssText = 'display:inline-block; width:120px;'; }
+if (premierjour.getDay() === 5) { espace.style.cssText = 'display:inline-block; width:160px;'; }
+if (premierjour.getDay() === 6) { espace.style.cssText = 'display:inline-block; width:200px;'; }
+if (premierjour.getDay() === 0) { espace.style.cssText = 'display:inline-block; width:240px;'; }
 document.getElementById('dates').appendChild(espace);
 
 let i = premierjour;
