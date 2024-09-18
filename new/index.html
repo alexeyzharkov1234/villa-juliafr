@@ -34,6 +34,7 @@ height: 100%;
 background:var(--beige);
 line-height:0;
 }
+select {appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; padding: 0; margin: 0; background: transparent; color: inherit; font-size:20px; font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; }
 a {text-decoration:none; color:white;}
 
 h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; font-size:45px;  color:var(--marron); padding:0; margin:0; line-height:120%; margin-bottom:25px; }
@@ -64,8 +65,9 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
   h1 {font-size:35px;}
 }
 
-.btn {display:inline-block; background:var(--marron); color:white; padding:10px 20px; border-radius:10px; }
-.btn:hover {background:rgb(110, 54, 22);}
+.btn {display:inline-block; background:var(--marron); color:white; padding:10px 20px; margin:5px;  border-radius:10px; text-align:center;  }
+.btn-light {background:var(--beige); border:solid 1px var(--marron); color:var(--marron); }
+.btn:hover { cursor:pointer;}
 
 
 #menu {z-index:100; width:100%; background:var(--marron); padding:25px 0; color:white; font-weight:400; font-size:18px; text-align:center; }
@@ -82,18 +84,42 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 #accueil h1 {font-size:45px;}
 }
 
-#appartements { color:var(--marron); width:calc(100% - 80px); background:var(--beige2); text-align:center; padding:80px 40px; font-size:18px; line-height:125%;  }
-#appartements a {color:var(--marron); }
-#appartements .appartement {width:200px; margin:40px; display:inline-block;}
-#appartements .appartement .photo {width:200px; height:200px; border-radius:50%; background:var(--marron); margin-bottom:15px; background-position: center; background-repeat: no-repeat; background-size: cover; }
-#appartements .appartement .titre {margin-bottom:5px; font-weight:600;}
-#appartements .appartement .soustitre {margin-bottom:15px;}
+
+
+#reserver { color:var(--marron); width:calc(100% - 80px); background:var(--beige2); text-align:center; padding:80px 40px; font-size:18px; line-height:125%;  }
+#reserver a {color:var(--marron); }
+#reserver .appartement {width:200px; margin:40px; display:inline-block;}
+#reserver .appartement .photo {width:200px; height:200px; border-radius:50%; background:var(--marron); margin-bottom:15px; background-position: center; background-repeat: no-repeat; background-size: cover; }
+#reserver .appartement .titre {margin-bottom:5px; font-weight:600;}
+#reserver .appartement .soustitre {margin-bottom:15px;}
+#reserver .unavailable {background-color: #ddd; color: #888;}
 
 @media screen and (max-width: 700px) {
-#appartements {width:100%;padding:50px 0;}
-#appartements .appartement {width:calc(50% - 40px); margin:30px 10px; padding:0; }
-#appartements .appartement .photo {border-radius:10px; width:100%; height:250px; /*width:150px; height:150px; margin: 0 auto 15px auto;*/} 
+#reserver {width:100%;padding:50px 0;}
+#reserver .appartement {width:calc(50% - 40px); margin:30px 10px; padding:0; }
+#reserver .appartement .photo {border-radius:10px; width:100%; height:250px; /*width:150px; height:150px; margin: 0 auto 15px auto;*/} 
 }
+
+
+
+/* calendrier */
+#calendrier { text-align:left; background:var(--beige); border:solid 1px var(--marron); margin:5px auto; padding:20px 10px; border-radius:10px; display:none; position:relative; width:350px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+
+#calendrier #mois {text-transform:capitalize; text-align:center; font-weight:900; margin:0 10px 20px 10px;}
+#calendrier #mois-precedent, #calendrier #mois-suivant { cursor:pointer;  }
+#calendrier #mois-precedent {position:absolute; top:20px; left:50px;}
+#calendrier #mois-suivant {position:absolute; top:20px; right:50px;}
+
+#calendrier .semaine {width:50px; height:25px; display:inline-block; text-align:center;}
+#calendrier #espace {height:30px; display:none; vertical-align:middle; }
+
+#calendrier .date {width:50px; padding:7px 0; display:inline-block; text-align:center; font-weight:900; opacity:0.25; }
+
+#calendrier .noir {opacity:1;  }
+#calendrier .noir:hover{background:rgba(0,0,0,0.05); border-radius:10px; cursor:pointer; }
+
+
+
 
 #contact {background:var(--marron); color:white; text-align:center; padding:80px 0; }
 #contact .texte{width:500px;  display:inline-block; vertical-align:top; text-align:left; margin-right:20px;  }
@@ -115,6 +141,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 
 
+
 </style>
 </head>
 <body>
@@ -125,7 +152,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 <div id="menu">
 <a href="#villajulia">Villa Julia</a>
-<a href="#appartements">Appartements</a>
+<a href="#reserver">Réserver</a>
 <a href="#contact">Contact</a>
 <div>FR</div>
 </div>
@@ -150,7 +177,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 </ul>       
 <p>Excellent emplacement à proximité des attractions et des plus beaux endroits</p>
 <p>Venez découvrir. Notre équipe est à votre service 🫶</p>
-<a class="btn" href="#appartements">Découvrir les appartements</a>
+<a class="btn" href="#reserver">Voir les disponibilités</a>
 </div>
 
 </div>
@@ -161,70 +188,99 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 
 
---><div id="appartements">
+--><div id="reserver">
 
 
-<h1>Nos appartements</h1>
+  <select class="btn btn-light">
+    <option value="villajulia" selected>Villa Julia</option>
+  </select>
+
+  <div id="bouton-reserver"  class="btn btn-light">Sélectionner les dates</div>
+
+<select class="btn btn-light">
+  <option value="1">1 personne</option>
+  <option value="2" selected>2 personnes</option>
+  <option value="3">3 personnes</option>
+  <option value="4">4 personnes</option>
+  <option value="5">5 personnes</option>
+  <option value="6">6 personnes</option>
+  <option value="7">7 personnes</option>
+  <option value="8">8 personnes</option>
+  <option value="9">9 personnes</option>
+  <option value="10">10 personnes</option>
+</select>
+
+<div id="calendrier">
+  <div id="mois-precedent"><</div>
+  <div id="mois"></div>
+  <div id="mois-suivant">></div>
+  <div id="semaine"></div>
+  <div id="dates"></div>
+  </div>
 
 
-<a href="">
+<br><br>
+
+
+
+
 <div class="appartement">
-<div class="photo" style="background-image:url('apt1.jpg');  "></div>
-<div class="titre">Appartement 1</div>
-<div class="soustitre">Jusqu'à 3 personnes</div>
-<div class="btn">Voir les prix</div>
-</div>
-</a>
-
-
-<a href="">
-<div class="appartement">
-<div class="photo" style="background-image:url('apt2.jpg');  "></div>
-<div class="titre">Appartement 2</div>
-<div class="soustitre">Jusqu'à 2 personnes</div>
-<div class="btn">Voir les prix</div>
-</div>
-</a>
-
-
-<a href="">
-<div class="appartement">
-<div class="photo" style="background-image:url('apt3.jpg');  "></div>
-<div class="titre">Appartement 3</div>
-<div class="soustitre">Jusqu'à 3 personnes</div>
-<div class="btn">Voir les prix</div>
-</div>
-</a>
-
-
-<a href="">
-<div class="appartement">
-<div class="photo" style="background-image:url('apt4.jpg');  "></div>
-<div class="titre">Appartement 4</div>
-<div class="soustitre">Jusqu'à 3 personnes</div>
-<div class="btn">Voir les prix</div>
-</div>
-</a>
-
-
-<a href="">
-<div class="appartement">
-<div class="photo" style="background-image:url('apt5.jpg');  "></div>
-<div class="titre">Appartement 5</div>
-<div class="soustitre">Jusqu'à 2 personnes</div>
-<div class="btn">Voir les prix</div>
-</div>
-</a>
-
-
-<a href="">
-<div class="appartement">
-<div class="photo" style="background-image:url('apt6.jpg');  "></div>
-<div class="titre">Appartement 6</div>
-<div class="soustitre">Jusqu'à 2 personnes</div>
-<div class="btn">Voir les prix</div>
-</div>
-</a>
+  <div class="photo" style="background-image:url('apt1.jpg');  "></div>
+  <div class="titre">Appartement 1</div>
+  <div class="soustitre">Jusqu'à 3 personnes</div>
+  <div class="btn">Réserver</div>
+  </div>
+  
+  
+  
+  
+  <div class="appartement">
+  <div class="photo" style="background-image:url('apt2.jpg');  "></div>
+  <div class="titre">Appartement 2</div>
+  <div class="soustitre">Jusqu'à 2 personnes</div>
+  <div class="btn">Réserver</div>
+  </div>
+  
+  
+  
+  
+  <div class="appartement">
+  <div class="photo" style="background-image:url('apt3.jpg');  "></div>
+  <div class="titre">Appartement 3</div>
+  <div class="soustitre">Jusqu'à 3 personnes</div>
+  <div class="btn">Réserver</div>
+  </div>
+  
+  
+  
+  
+  <div class="appartement">
+  <div class="photo" style="background-image:url('apt4.jpg');  "></div>
+  <div class="titre">Appartement 4</div>
+  <div class="soustitre">Jusqu'à 3 personnes</div>
+  <div class="btn">Réserver</div>
+  </div>
+  
+  
+  
+  
+  <div class="appartement">
+  <div class="photo" style="background-image:url('apt5.jpg');  "></div>
+  <div class="titre">Appartement 5</div>
+  <div class="soustitre">Jusqu'à 2 personnes</div>
+  <div class="btn">Réserver</div>
+  </div>
+  
+  
+  
+  
+  <div class="appartement">
+  <div class="photo" style="background-image:url('apt6.jpg');  "></div>
+  <div class="titre">Appartement 6</div>
+  <div class="soustitre">Jusqu'à 2 personnes</div>
+  <div class="btn">Réserver</div>
+  </div>
+  
 
 
 
@@ -319,7 +375,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 <div class="texte">
 <h1>Contact</h1>
-<p>Merci de l'intérêt que vous pourtez à la Villa Julia. Veuillez choisir l'une des options ci-dessous.</p>
+<p>Merci de l'intérêt que vous portez à la Villa Julia. Veuillez choisir l'une des options ci-dessous.</p>
 
 <h3>
 28 Rue des Thermes<br>
@@ -388,18 +444,75 @@ slider.innerHTML += '<img class="precedent" src="precedent.svg"><img class="suiv
 });
 
 
+// calendrier --------------------------------------------------------------------------------------
 
-// photos ----------------------------------------------------------------------------
-/*
-const tableau = [
-{"id":"accueil", "index":0, "photos":['url(facade.jpg)', 'url(entree.jpg)', 'url(jardin.jpg)']},
-{"id":"test", "index":0, "photos":['url(facade.jpg)', 'url(entree.jpg)', 'url(jardin.jpg)']}
-];
+let options,contenu,date,div;
+// let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-const element = document.querySelector('[data-slider="accueil"]');
+// jours de la semaine
+date = new Date(2024, 0, 0);
+for (let i = 0; i <= 6; i++) {
+date.setDate(date.getDate() + 1);
+contenu = date.toLocaleDateString('default', { weekday: 'long' }).substring(0, 2);
+div = document.createElement('div');
+div.textContent = contenu;
+div.classList.add("semaine");
+document.getElementById('semaine').appendChild(div);
+}
 
-for (i=0; i<tableau.length; i++) {console.log(tableau[i].id);}
-*/
+// générer calendrer 
+date = new Date();
+aujourdhui = new Date();
+aujourdhui.setHours(0, 0, 0, 0);
+
+function generer_calendrier(date) {
+
+document.getElementById("mois").innerHTML = "";
+document.getElementById("dates").innerHTML = "";
+
+document.getElementById('mois').textContent = date.toLocaleDateString('default', { year: 'numeric', month: 'long' });
+
+let premierjour = new Date(date.getFullYear(), date.getMonth(), 1);
+let dernierjour = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+
+let espace = document.createElement('div');
+espace.id = "espace";
+if (premierjour.getDay() === 2) { espace.style.cssText = 'display:inline-block; width:50px;'; }
+if (premierjour.getDay() === 3) { espace.style.cssText = 'display:inline-block; width:100px;'; }
+if (premierjour.getDay() === 4) { espace.style.cssText = 'display:inline-block; width:150px;'; }
+if (premierjour.getDay() === 5) { espace.style.cssText = 'display:inline-block; width:200px;'; }
+if (premierjour.getDay() === 6) { espace.style.cssText = 'display:inline-block; width:250px;'; }
+if (premierjour.getDay() === 0) { espace.style.cssText = 'display:inline-block; width:300px;'; }
+document.getElementById('dates').appendChild(espace);
+
+let i = premierjour;
+while (i <= dernierjour) {
+let contenu = i.toLocaleString('default', { day: 'numeric' });
+let div = document.createElement('div');
+div.textContent = contenu;
+div.classList.add("date");
+if (i.getTime() >= aujourdhui.getTime()) {div.classList.add('noir');}
+document.getElementById('dates').appendChild(div);
+i.setDate(i.getDate() + 1);
+}
+
+}
+
+generer_calendrier(date);
+
+// générer mois suivant 
+document.getElementById('mois-suivant').addEventListener('click', function() { date.setMonth(date.getMonth() + 1); generer_calendrier(date); });
+
+// générer mois précédent 
+document.getElementById('mois-precedent').addEventListener('click', function() { date.setMonth(date.getMonth() - 1); generer_calendrier(date); });
+
+// bouton calendrier-reserver 
+document.getElementById('bouton-reserver').addEventListener('click', function() {
+    document.getElementById('calendrier').style.display = 'block';
+});
+
+
+
 
 </script>
 
