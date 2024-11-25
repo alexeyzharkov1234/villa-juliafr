@@ -20,8 +20,16 @@
 :root {
 --beige: rgb(252, 236, 217);
 --beige2: rgb(255, 232, 206);
+--beige3: rgb(188, 105, 57);
 --bleu: rgb(0, 69, 92);
 --marron: rgb(100,38,1);
+--marron05: rgba(100,38,1,0.05);
+--marron25: rgba(100,38,1,0.25);
+--marron5: rgba(100,38,1,0.5);
+--marron65: rgba(100,38,1,0.65);
+--marron75: rgba(100,38,1,0.75);
+--marron85: rgba(100,38,1,0.85);
+--marron95: rgba(100,38,1,0.95);
 }
 
 body, html {
@@ -59,19 +67,19 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 @media screen and (max-width: 750px) {
   .photobg {width:100%; height:100vh;}
   .bloc {width:100%; height:auto; padding:0; margin:0; }
-  .contenu {width:calc(100% - 50px); padding:50px 25px; margin:0; }
+  .contenu {width:calc(100% - 50px); padding:60px 25px 50px 25px; margin:0; }
   .pc {display:none;}
   .mobile {display:block;}
   h1 {font-size:35px;}
 }
 
-.btn {display:inline-block; background:var(--marron); color:white; padding:10px 20px; margin:5px;  border-radius:7px; text-align:center;  }
+.btn {display:inline-block; background:var(--marron95); color:white; padding:15px 25px; margin:5px;  border-radius:5px; text-align:center;  }
 .btn-light {background:var(--beige); border:solid 1px var(--marron); color:var(--marron); }
-.btn:hover { cursor:pointer;}
+.btn:hover { cursor:pointer;background:var(--marron85);}
 
 
-#menu {z-index:100; width:100%; background:var(--beige2); padding:25px 0; color:var(--marron); font-weight:400; font-size:18px; text-align:center; }
-#menu div, #menu a {margin:1px 10px; vertical-align:middle; display:inline-block; }
+#menu {z-index:100; width:100%; background:var(--marron5); padding:25px 0; color:white; font-weight:400; font-size:16px; text-align:center; }
+#menu div, #menu a {margin:1px 15px; color:white; vertical-align:middle; display:inline-block; }
 #menu span:hover, #menu a:hover {cursor:pointer; /*border-bottom:solid 2px white;*/ text-decoration:underline;  }
 
 #accueil {text-align:center;}
@@ -86,24 +94,25 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 
 
-#apppartements { color:var(--marron); width:calc(100% - 80px); background:var(--beige2); text-align:center; padding:80px 40px; font-size:18px; line-height:125%;  }
-#apppartements a {color:var(--marron); }
-#apppartements .appartement {width:200px; margin:40px; display:inline-block;}
-#apppartements .appartement .photo {width:200px; height:200px; border-radius:50%; background:var(--marron); margin-bottom:15px; background-position: center; background-repeat: no-repeat; background-size: cover; }
-#apppartements .appartement .titre {margin-bottom:5px; font-weight:600;}
-#apppartements .appartement .soustitre {margin-bottom:15px;}
-#apppartements .btn {font-size:18px;}
-#apppartements #total {display:inline-block; background:var(--beige); border:solid 1px var(--marron); border-radius:10px; margin-top:20px; padding: 20px 20px 20px 30px; }
-#apppartements #total #devise {margin-right:10px; }
-#apppartements #total .titre {/*font-size:25px;*/ font-weight:900; margin-right:20px;}
+#appartements { color:var(--marron); width:calc(100% - 80px); background:var(--marron05); text-align:center; padding:80px 40px; font-size:18px; line-height:125%;  }
+#appartements a {color:var(--marron); }
+#appartements .appartement {width:200px; margin:40px; display:inline-block;}
+#appartements .appartement .photo {width:200px; height:200px; border-radius:50%; background:var(--marron); margin-bottom:15px; background-position: center; background-repeat: no-repeat; background-size: cover; }
+#appartements .appartement .titre {margin-bottom:5px; font-weight:600;}
+#appartements .appartement .soustitre {margin-bottom:15px;}
+#appartements .btn {font-size:18px; padding:10px 20px;}
+#appartements #total {display:inline-block; background:var(--beige); border:solid 1px var(--marron); border-radius:10px; margin-top:20px; padding: 20px 20px 20px 30px; }
+#appartements #total #devise {margin-right:10px; }
+#appartements #total .titre {/*font-size:25px;*/ font-weight:900; margin-right:20px;}
 
 @media screen and (max-width: 700px) {
-#apppartements {width:100%;padding:50px 0;}
-#apppartements .appartement {width:calc(50% - 40px); margin:30px 10px; padding:0; }
-#apppartements .appartement .photo {border-radius:10px; width:100%; height:250px; /*width:150px; height:150px; margin: 0 auto 15px auto;*/} 
+#appartements {width:100%;padding:50px 0;}
+#appartements .appartement {width:calc(50% - 40px); margin:30px 10px; padding:0; }
+#appartements .appartement .photo {border-radius:5px; width:100%; height:250px; /*width:150px; height:150px; margin: 0 auto 15px auto;*/} 
 }
 
 
+/*
 #calendrier { text-align:left; background:var(--beige); border:solid 1px var(--marron); margin:5px auto; padding:20px 10px 10px 10px; border-radius:10px; display:none; position:relative; width:280px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
 
 #calendrier #mois {text-transform:capitalize; text-align:center; font-weight:900; margin:0 10px 20px 10px;}
@@ -120,11 +129,17 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 #calendrier .noir:hover{background:rgba(0,0,0,0.05); border-radius:10px; cursor:pointer; }
 
 #calendrier .btn {width:calc(100% - 50px); margin-top:20px; }
+*/
 
+#contact {background:var(--marron65); color:white; display:inline-block; }
+#contact h1 {color:white;}
+#contact .contenu { color:white; text-align:left;}
 
+#googlemap {width:50%; height:100vh; display:inline-block; }
+@media screen and (max-width: 750px) {#googlemap {width:100%; }}
 
-
-#contact {background:var(--marron); color:white; text-align:center; padding:80px 0; }
+/*
+#contact {background:var(--marron5); color:white; text-align:center; padding:80px 0; }
 #contact .texte{width:500px;  display:inline-block; vertical-align:top; text-align:left; margin-right:20px;  }
 #contact iframe{width:500px; border-radius:10px; margin:0 0 0 20px; }
 #contact h1 {margin-top:0; padding-top:0; color:white; }
@@ -141,7 +156,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
   #contact .texte {margin:25px; width:calc(100% - 50px);}
   #contact iframe {margin:25px; width:calc(100% - 50px); }
 }
-
+*/
 
 
 
@@ -180,7 +195,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 </ul>       
 <p>Excellent emplacement à proximité des attractions et des plus beaux endroits</p>
 <p>Venez découvrir. Notre équipe est à votre service 🫶</p>
-<a class="btn" href="#apppartements">Voir nos appartements</a>
+<a class="btn" href="#appartements">Découvrir nos appartements</a>
 </div>
 
 </div>
@@ -191,11 +206,11 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 
 
---><div id="apppartements">
+--><div id="appartements">
 
-  <h1>Réserver</h1>
+  <h1>Appartements</h1>
 
-  <select class="btn btn-light">
+  <!--select class="btn btn-light">
     <option value="villajulia" selected>Villa Julia</option>
   </select>
 
@@ -224,7 +239,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
   </div>
 
 
-<br><br>
+<br><br-->
 
 
 
@@ -233,7 +248,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
   <div class="photo" style="background-image:url('apt1.jpg');  "></div>
   <div class="titre">Appartement 1</div>
   <div class="soustitre">Jusqu'à 3 personnes</div>
-  <div class="btn">Sélectionner</div>
+  <div class="btn">Découvrir</div>
   </div>
   
   
@@ -243,7 +258,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
   <div class="photo" style="background-image:url('apt2.jpg');  "></div>
   <div class="titre">Appartement 2</div>
   <div class="soustitre">Jusqu'à 2 personnes</div>
-  <div class="btn">Sélectionner</div>
+  <div class="btn">Découvrir</div>
   </div>
   
   
@@ -253,7 +268,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
   <div class="photo" style="background-image:url('apt3.jpg');  "></div>
   <div class="titre">Appartement 3</div>
   <div class="soustitre">Jusqu'à 3 personnes</div>
-  <div class="btn">Sélectionner</div>
+  <div class="btn">Découvrir</div>
   </div>
   
   
@@ -263,7 +278,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
   <div class="photo" style="background-image:url('apt4.jpg');  "></div>
   <div class="titre">Appartement 4</div>
   <div class="soustitre">Jusqu'à 3 personnes</div>
-  <div class="btn">Sélectionner</div>
+  <div class="btn">Découvrir</div>
   </div>
   
   
@@ -273,7 +288,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
   <div class="photo" style="background-image:url('apt5.jpg');  "></div>
   <div class="titre">Appartement 5</div>
   <div class="soustitre">Jusqu'à 2 personnes</div>
-  <div class="btn">Sélectionner</div>
+  <div class="btn">Découvrir</div>
   </div>
   
   
@@ -283,19 +298,17 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
   <div class="photo" style="background-image:url('apt6.jpg');  "></div>
   <div class="titre">Appartement 6</div>
   <div class="soustitre">Jusqu'à 2 personnes</div>
-  <div class="btn">Sélectionner</div>
+  <div class="btn">Découvrir</div>
   </div>
 
 
-  <br>
 
-
-<div id="total">
+<!--div id="total">
 <span class="titre">Total</span>
 <span id="montant">320</span>
 <span id="devise">EUR</span>  
 <div class="btn">Payer</div>
-</div>
+</div-->
 
 
 </div>
@@ -385,9 +398,9 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
  --------------------------------------------------------------- 
 
 
---><div id="contact">
+--><div id="contact" class="bloc">
 
-<div class="texte">
+<div class="texte contenu">
 <h1>Contact</h1>
 <p>Merci de l'intérêt que vous portez à la Villa Julia. Veuillez choisir l'une des options ci-dessous.</p>
 
@@ -401,9 +414,9 @@ contact@villa-julia.fr
 </h3>
 </div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d182.0144920058703!2d0.308665!3d43.120655000000006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a84b0012371f8b%3A0x85b29ae67cb67532!2sVilla%20Julia!5e0!3m2!1sen!2sch!4v1723615056242!5m2!1sen!2sch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+</div><!--
 
+--><iframe id="googlemap" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d182.0144920058703!2d0.308665!3d43.120655000000006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a84b0012371f8b%3A0x85b29ae67cb67532!2sVilla%20Julia!5e0!3m2!1sen!2sch!4v1723615056242!5m2!1sen!2sch" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
 <!-- --------------------------------------------------------------- -->
