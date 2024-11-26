@@ -18,19 +18,12 @@
 }
 
 :root {
---beige: rgb(252, 236, 217);
---beige2: rgb(255, 232, 206);
---beige3: rgb(188, 105, 57);
---bleu: rgb(0, 69, 92);
+--beige: rgb(246, 228, 209);
+--beige2: rgb(239, 216, 192);
 --marron: rgb(100,38,1);
---marron05: rgba(100,38,1,0.05);
---marron25: rgba(100,38,1,0.25);
---marron5: rgba(100,38,1,0.5);
---marron65: rgba(100,38,1,0.65);
---marron75: rgba(100,38,1,0.75);
---marron85: rgba(100,38,1,0.85);
---marron9: rgba(100,38,1,0.9);
---marron95: rgba(100,38,1,0.95);
+--marron2: rgba(100,38,1,0.5);
+--marron3: rgba(100,38,1,0.85);
+--2marron: rgb(69,52,42);
 }
 
 body, html {
@@ -74,18 +67,18 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
   h1 {font-size:35px;}
 }
 
-.btn {display:inline-block; background:var(--marron9); color:white; padding:15px 25px; margin:5px;  border-radius:5px; text-align:center;  }
+.btn {display:inline-block; background:var(--marron3); color:white; padding:15px 25px; margin:5px;  border-radius:5px; text-align:center;  }
 .btn-light {background:var(--beige); border:solid 1px var(--marron); color:var(--marron); }
-.btn:hover { cursor:pointer;background:var(--marron85);}
+.btn:hover { cursor:pointer;opacity:0.9; }
 
 
-#menu {z-index:100; width:100%; background:var(--marron5); padding:25px 0; color:white; font-weight:400; font-size:16px; text-align:center; }
+#menu {z-index:100; width:100%; background:var(--marron2); padding:25px 0; color:white; font-weight:400; font-size:16px; text-align:center; }
 #menu div, #menu a {margin:1px 15px; color:white; vertical-align:middle; display:inline-block; }
 #menu span:hover, #menu a:hover {cursor:pointer; /*border-bottom:solid 2px white;*/ text-decoration:underline;  }
 
 #accueil {text-align:center;}
 #accueil h1 {font-family: 'BlackmoorCom', Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; text-transform:uppercase; font-size:50px;  letter-spacing:4px; word-spacing:5px; margin-bottom:25px; text-align:center;}
-#accueil .contenu {font-size:17px;}
+#accueil .contenu {/*font-size:17px;*/}
 #accueil .btn {margin-top:20px; font-size:18px;}
 #accueil p, ul {text-align:left;}
 
@@ -95,7 +88,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 
 
-#appartements { color:var(--marron); width:calc(100% - 80px); background:var(--marron05); text-align:center; padding:80px 40px; font-size:18px; line-height:125%;  }
+#appartements { color:var(--marron); width:calc(100% - 80px); background:var(--beige2); text-align:center; padding:80px 40px; font-size:18px; line-height:125%;  }
 #appartements a {color:var(--marron); }
 #appartements .appartement {width:200px; margin:40px; display:inline-block;}
 #appartements .appartement .photo {width:200px; height:200px; border-radius:50%; background:var(--marron); margin-bottom:15px; background-position: center; background-repeat: no-repeat; background-size: cover; }
@@ -132,7 +125,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 #calendrier .btn {width:calc(100% - 50px); margin-top:20px; }
 */
 
-#contact {background:var(--marron65); color:white; display:inline-block; }
+#contact {background:var(--marron2); color:white; display:inline-block; }
 #contact h1 {color:white;}
 #contact .contenu { color:white; text-align:left;}
 
@@ -186,15 +179,8 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 <div class="contenu">
 <!--img src="logo.png"-->
 <h1>Villa Julia</h1>
-<p>Si vous souhaitez vous éloigner du trafic routier et partir de la pollution en ville, passer du temps avec vos proches, profiter de la beauté du paysage rural et, en même temps améliorer votre santé, nous vous invitons dans nos appartements confortables à Capvern les Bains en plein cœur de Hautes Pyrénées.</p>
-<p>Nous vous proposons :</p>
-<ul>
-<li>6 appartements T2 entièrement équipés</li> 
-<li>Emplacement à côté un bar/épicerie</li>
-<li>400 m des Thermes (arrêt de la navette thermale gratuite est en face)</li>
-<li>Jardin privé </li>
-</ul>       
-<p>Excellent emplacement à proximité des attractions et des plus beaux endroits</p>
+<p>Si vous souhaitez vous éloigner du trafic routier et partir de la pollution en ville, passer du temps avec vos proches, profiter de la beauté du paysage rural et, en même temps améliorer votre santé, nous vous invitons dans nos appartements confortables à Capvern les Bains en plein cœur de Hautes Pyrénées.</p>     
+<p>Excellent emplacement à proximité des attractions et des plus beaux endroits.</p>
 <p>Venez découvrir. Notre équipe est à votre service 🫶</p>
 <a class="btn" href="#appartements">Découvrir nos appartements</a>
 </div>
@@ -209,7 +195,15 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 --><div id="appartements">
 
-  <h1>Appartements</h1>
+  <h1>Nos appartements</h1>
+
+  <p>Nous vous proposons :</p>
+<ul>
+<li>6 appartements T2 entièrement équipés</li> 
+<li>Emplacement à côté un bar/épicerie</li>
+<li>400 m des Thermes (arrêt de la navette thermale gratuite est en face)</li>
+<li>Jardin privé </li>
+</ul>  
 
   <!--select class="btn btn-light">
     <option value="villajulia" selected>Villa Julia</option>
@@ -239,72 +233,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
   <div id="bouton-reserver" class="btn">Enregistrer</div>
   </div>
 
-
-<br><br-->
-
-
-
-
-<div class="appartement">
-  <div class="photo" style="background-image:url('apt1.jpeg');  "></div>
-  <div class="titre">Appartement 1</div>
-  <div class="soustitre">Jusqu'à 3 personnes</div>
-  <div class="btn">Découvrir</div>
-  </div>
-  
-  
-  
-  
-  <div class="appartement">
-  <div class="photo" style="background-image:url('apt2.jpeg');  "></div>
-  <div class="titre">Appartement 2</div>
-  <div class="soustitre">Jusqu'à 2 personnes</div>
-  <div class="btn">Découvrir</div>
-  </div>
-  
-  
-  
-  
-  <div class="appartement">
-  <div class="photo" style="background-image:url('apt3.jpeg');  "></div>
-  <div class="titre">Appartement 3</div>
-  <div class="soustitre">Jusqu'à 3 personnes</div>
-  <div class="btn">Découvrir</div>
-  </div>
-  
-  
-  
-  
-  <div class="appartement">
-  <div class="photo" style="background-image:url('apt4.jpeg');  "></div>
-  <div class="titre">Appartement 4</div>
-  <div class="soustitre">Jusqu'à 3 personnes</div>
-  <div class="btn">Découvrir</div>
-  </div>
-  
-  
-  
-  
-  <div class="appartement">
-  <div class="photo" style="background-image:url('apt5.jpeg');  "></div>
-  <div class="titre">Appartement 5</div>
-  <div class="soustitre">Jusqu'à 2 personnes</div>
-  <div class="btn">Découvrir</div>
-  </div>
-  
-  
-  
-  
-  <div class="appartement">
-  <div class="photo" style="background-image:url('apt6.jpeg');  "></div>
-  <div class="titre">Appartement 6</div>
-  <div class="soustitre">Jusqu'à 2 personnes</div>
-  <div class="btn">Découvrir</div>
-  </div>
-
-
-
-<!--div id="total">
+<div id="total">
 <span class="titre">Total</span>
 <span id="montant">320</span>
 <span id="devise">EUR</span>  
@@ -425,6 +354,38 @@ contact@villa-julia.fr
 
 
 <script>
+
+// json ---------------------------------------------------------------------------------
+const appartements = [
+{"titre":"Appartement 1","capacite":"1 à 2 personnes","description":["2 pièces: kitchenette avec coin repas + chambre: grande fenêtre (vue jardin)  + sdb + wc","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière","Chambre avec lit en 140, TV canal +, ventilateur , endoir à linge","SDB (douche) WC, sèche-cheveux,  sèche-serviettes","Elements de confort communs: lave-linge séchant, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt1/1.jpeg","apt1/2.jpeg"]},
+{"titre":"Appartement 2","capacite":"1 à 3 personnes","description":["2 pièces: kitchenette avec coin repas spacieux+ chambre + sdb + wc","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, TV canal+","Chambre très spacieuse avec lit en 140 (nouveau matelas), fauteuil convertible, canapé, TV canal +, ventilateur , endoir à linge,  2 grandes fenêtres (vue jardin) ","SDB (douche) WC, sèche-cheveux, sèche-serviettes ","Elements de confort communs: lave-linge séchant , tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt2/1.jpeg","apt2/2.jpeg"]},
+{"titre":"Appartement 3","capacite":"1 à 3 personnes","description":["2 pièces: kitchenette avec coin repas/séjour + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, TV canal+ *possibilité d'ajouter un canapé convertible en 140","Chambre avec lit en 140 (nouveau matelas), armoire, TV canal +, ventilateur , endoir à linge,  grand fenêtre (vue jardin) ","SDB (douche) WC, sèche-cheveux,  sèche-serviettes", "Elements de confort communs: lave-linge séchant , tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt3/1.jpeg","apt3/2.jpeg"]},
+{"titre":"Appartement 4","capacite":"1 à 2 personnes","description":["2 pièces: kitchenette avec coin repas + chambre + sdb + wc ","Kitchenette: micro-ondes, mini-frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière","Chambre avec lit en 140, armoire, TV canal +, ventilateur, endoir à linge ,grande fenetre (vue jardin)","SDB (cabine de douche) WC, sèche-cheveux, sèche-serviettes ", "Elements de confort communs: lave-linge séchant , tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt4/1.jpeg","apt4/2.jpeg"]},
+{"titre":"Appartement 5","capacite":"2 à 4 personnes","description":["2 pièces: kitchenette avec coin repas/séjour (canapé convertible en 140) + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière,  ventilateur, TV canal+","Chambre très spacieuse avec lit en 140 (nouveau matelas), vue jardin, très grande armoire, TV canal+, climatiseur, endoir à linge","SDB (cabine de douche) WC, sèche-cheveux, sèche-serviettes ","Elements de confort communs: lave-linge, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt5/1.jpeg","apt5/2.jpeg"]},
+{"titre":"Appartement 6","capacite":"2 à 4 personnes","description":["2 pièces: kitchenette avec coin repas/séjour (canapé convertible en 140) + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, TV canal+, ventilateur ","Chambre avec lit en 140, vue jardin, armoire, TV canal+, climatiseur, endoir à linge ","SDB spacieuse avec fenêtre(cabine de douche) WC, sèche-cheveux, sèche-serviettes ","Elements de confort communs: lave-linge, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt6/1.jpeg","apt6/2.jpeg"]},
+];
+
+
+
+const container = document.getElementById('appartements');
+
+// Générer le HTML pour chaque appartement
+appartements.forEach(e => {
+    const html = `
+        <div class="appartement">
+            <div class="photo" style="background-image:url('${e.photos[0]}');"></div>
+            <div class="titre">${e.titre}</div>
+            <div class="soustitre">${e.capacite}</div>
+            <div class="btn">Découvrir</div>
+        </div>
+    `;
+    // Ajouter le HTML dans le conteneur
+    container.insertAdjacentHTML('beforeend', html);
+});
+
+
+
+
 
 // slider accueil ---------------------------------------------------------------------------------
 const tableau_accueil = [

@@ -43,7 +43,7 @@
        d="M 19.919605,59.699225 39.763355,33.240892 19.919605,6.7825578"
        id="path1" />
     <path
-       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#642601;stroke-width:5.29167;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#642601;stroke-width:5.29167;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;opacity:0.5"
        d="M 26.571414,59.699225 46.415165,33.240892 26.571414,6.7825578"
        id="path1-3" />
   </g>
