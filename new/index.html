@@ -40,7 +40,7 @@ background:var(--beige);
 line-height:0;
 }
 
-select {appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; padding: 0; margin: 0; background: transparent; color: inherit; font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; }
+/*select {appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; padding: 0; margin: 0; background: transparent; color: inherit; font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; }*/
 a {text-decoration:none; color:white;}
 
 h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; font-size:45px;  color:var(--marron); padding:0; margin:0; line-height:120%; margin-bottom:25px; }
@@ -131,10 +131,31 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 }
 
 
-#reserver { background:var(--beige2); text-align:center; padding: 100px 0; line-height:150%; }
-#reserver input, #reserver textarea {all:unset; font-size:18px; background:white; border:solid 1px rgb(200,200,200); color:black; padding:10px 15px; margin:10px; border-radius:7px; text-align:left; font-weight:400; }
+#reserver { width:50%; display:inline-block; vertical-align:top; background:var(--beige2); text-align:center; padding: 100px 0; line-height:150%; }
+#reserver h1 {margin-left:25px; margin-right:25px; }
+#reserver p { width:500px; font-size:20px; color: var(--marron); line-height:1.4em; margin-bottom:45px; margin-left:auto; margin-right:auto; }
+#reserver input, #reserver select, #reserver textarea {all:unset; width:500px; display:block; font-size:18px; background:white; border:solid 1px rgb(200,200,200); color:black; padding:8px 16px; margin:10px auto; border-radius:5px; text-align:left; font-weight:400; }
+#reserver textarea {height:200px;}
 
+@media screen and (max-width: 1100px) {
+#reserver p, #reserver input, #reserver select, #reserver textarea {width:calc(100% - 50px); }
+}
 
+@media screen and (max-width: 750px) {
+  #reserver {width:100%; padding:60px 0 50px 0;}
+}
+
+#infospratiques { width:50%; display:inline-block; vertical-align:top; text-align:center; padding: 100px 0; line-height:150%; }
+#infospratiques h1 {margin-left:25px; margin-right:25px; }
+#infospratiques p {width:500px; font-size:20px; color: var(--marron); line-height:1.4em; text-align:left; margin-left:auto; margin-right:auto; }
+
+@media screen and (max-width: 1100px) {
+#infospratiques p {width:calc(100% - 50px); }
+}
+
+@media screen and (max-width: 750px) {
+  #infospratiques {width:100%; padding:60px 0 50px 0;}
+}
 
 /*
 #calendrier { text-align:left; background:var(--beige); border:solid 1px var(--marron); margin:5px auto; padding:20px 10px 10px 10px; border-radius:10px; display:none; position:relative; width:280px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
@@ -334,16 +355,39 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 --><div id="reserver">
 
   <h1>Tarifs et Réservations</h1>
-<input type="text" placeholder="Prénom" style="width:300px"><input type="text" placeholder="Nom" style="width:300px">
-<br>
-<input type="text" placeholder="Email" style="width:652px">
-<br>
-<input type="text" placeholder="Société" style="width:300px"><input type="text" placeholder="Téléphone" style="width:300px">
-<br>
-<textarea class="apparition" style="width:652px; height:250px;" placeholder="Message"></textarea>
-<br>
+
+  <p>Vous avez des questions ou besoin de conseils ? L’équipe de la Villa Julia se fera un plaisir de vous répondre rapidement et de vous fournir toutes les informations nécessaires pour préparer votre séjour à Capvern.</p>
+
+<input type="text" placeholder="Prénom">
+<input type="text" placeholder="Nom">
+<input type="text" placeholder="Email">
+<input type="text" placeholder="Téléphone">
+<select>
+  <optgroup>
+  <option value="volvo">Réservation d’un hébergement thermal</option>
+  <option value="saab">Réservation d’un hébergement touristique</option>
+  <option value="mercedes">Demande de devis</option>
+  <option value="audi">Autre</option>
+</optgroup>
+</select>
+<textarea class="apparition" placeholder="Message"></textarea>
+
 <div class="btn">Envoyer</div>
 
+
+</div><!--
+
+
+--------------------------------------------------------------- 
+
+--><div id="infospratiques">
+
+  <h1>Informations pratiques</h1>
+
+<p>Animaux de compagnie : les animaux de compagnie sont admis sur demande
+<p>⁠Moyens de paiement acceptés : cartes de crédit (Visa, Mastercard), espèces et chèques.</p>
+<p>Pour les enfants, nous mettons gratuitement (sur demande) à disposition un berceau, une chaise haute, une baignoire.</p>
+<p>Arrivée : de 15h00 à 19h00, Départ : avant 11h00. Arrivée/départ en dehors de ces horaires sur demande.</p>
 
 </div><!--
 
@@ -438,7 +482,7 @@ contenu += `<img class="photo" src="${photo}?w=250" srcset="${photo}?w=250 250w"
 });
 contenu += `<div class="titre">${appartement.titre}</div><div class="texte">${appartement.capacite}</div>`;
 appartement.description.forEach(description => { contenu += `<div class="texte">${description}</div>`; });
-contenu += '<a class="btn">Réserver cet appartement</a>';
+contenu += '<a href="#reserver" class="btn">Réserver cet appartement</a>';
 appartementcontenu.innerHTML = contenu;
 }
 
