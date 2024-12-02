@@ -133,7 +133,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 #appartement {display:none; text-align:center; background:var(--beige3); color:var(--marron); width:100%; line-height:150%; padding-bottom:50px;  }
 #appartement .btn { margin:30px 0;}
-#appartement #grand img, #appartement #grand video {height:500px;  margin-bottom:5px; border-radius:5px; }
+#appartement #grand img, #appartement #grand video {height:500px;  margin-bottom:5px; border-radius:5px; text-align:center; }
 #appartement .photo {height:80px; margin:5px; border-radius:5px; cursor:pointer; }
 #appartement #appartementcontenu .photo:hover {opacity:0.9;}
 #appartement .titre {width:700px; margin:50px auto 30px auto; font-size:30px; font-weight:600; }
@@ -537,7 +537,7 @@ appartementcontenu.innerHTML = "";
 grand.innerHTML = `<img src="${appartement.photos[0]}">`;
 let contenu= "";
 appartement.photos.forEach(photo => { 
-if (photo.endsWith(".mp4")) { contenu += `<video class="photo" autoplay loop><source src="${photo}" type="video/mp4"></video>`; }
+if (photo.endsWith(".mp4")) { contenu += `<video class="photo"><source src="${photo}" type="video/mp4"></video>`; }
 else { contenu += `<img class="photo" src="${photo}?w=250" srcset="${photo}?w=250 250w" sizes="250px">`; }
 });
 contenu += `<div class="titre">${appartement.titre}</div><div class="texte">${appartement.capacite}</div>`;
@@ -559,7 +559,7 @@ fermer.addEventListener('click', () => {
 fenetre.addEventListener("click", function(event) {
 grand.innerHTML = "";
 if (event.target.tagName === "IMG" && event.target.classList.contains("photo")) { grand.innerHTML = `<img src="${event.target.src}">`; }
-else if (event.target.tagName === "VIDEO" && event.target.classList.contains("photo")) { console.log(event.target.currentSrc); grand.innerHTML = `<video class="photo" autoplay loop><source src="${event.target.currentSrc}" type="video/mp4"></video>`; }
+else if (event.target.tagName === "VIDEO" && event.target.classList.contains("photo")) { grand.innerHTML = `<video class="photo"><source src="${event.target.currentSrc}" type="video/mp4"></video>`; }
 });
 
 
