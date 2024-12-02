@@ -23,7 +23,7 @@
 --beige2: rgb(239, 216, 192);
 --beige3: rgb(242, 224, 203);
 --marron: rgb(100,38,1);
---marron2: rgba(100,38,1,0.5);
+--marron2: rgb(179, 139, 114);
 --marron3: rgba(100,38,1,0.85);
 --2marron: rgb(69,52,42);
 }
@@ -83,6 +83,20 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 #menu {z-index:100; width:100%; background:var(--marron2); padding:25px 0; color:white; font-weight:400; font-size:16px; text-align:center; }
 #menu div, #menu a {margin:1px 15px; color:white; vertical-align:middle; display:inline-block; }
 #menu span:hover, #menu a:hover {cursor:pointer; text-decoration:underline;  }
+
+#menumobile1 {position:absolute; top:25px; left:25px;}
+#menumobile2 {position:absolute; top:25px; right:25px;}
+#menumobile3 {display:none; position:fixed; top:15px; right:25px;}
+
+@media screen and (min-width: 750px) {
+  #menumobile {display:none;}
+}
+@media screen and (max-width: 750px) {
+  #menu {display:none; position:fixed; height:100vh; line-height:150%; padding-top:100px; }
+  #menu div, #menu a {display:block; font-size:35px; margin:40px 0; }
+  #menumobile {width:100%; z-index:100; position:absolute; /*background:var(--marron2); padding:25px 0;*/ color:white; font-weight:400;}
+  #menumobile3 {display:block;}
+}
 
 #accueil {text-align:center;}
 #accueil h1 {font-family: 'BlackmoorCom', Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; text-transform:uppercase; font-size:50px;  letter-spacing:4px; word-spacing:5px; margin-bottom:25px; text-align:center;}
@@ -184,7 +198,6 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 @media screen and (max-width: 750px) {#googlemap {width:100%; }}
 
 
-
 </style>
 </head>
 <body>
@@ -194,12 +207,24 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 
 <div id="menu">
-<a href="">Accueil</a>
-<a href="#appartements">Appartements</a>
-<a href="#reserver">Tarifs et Réservations</a>
-<a href="#contact">Contact</a>
-<div>FR</div>
+
+<a class="menu" href="#appartements">Appartements</a>
+<a class="menu" href="#reserver">Tarifs et Réservations</a>
+<a class="menu" href="#contact">Contact</a>
+<div class="menu">FR</div>
+
+<span id="menumobile3">Fermer</span>
+
 </div>
+
+
+<div id="menumobile">
+
+  <span id="menumobile1">Villa Julia</span>
+  <span id="menumobile2">Menu</span>
+  
+</div>
+
 
 
 <!-- --------------------------------------------------------------- -->
@@ -421,6 +446,36 @@ contact@villa-julia.fr
 
 
 <script>
+
+// menu -----------------------------------------------------------------------------------------
+const menu = document.getElementById('menu');
+const menumobile = document.getElementById('menumobile');
+const menumobile2 = document.getElementById('menumobile2');
+const menumobile3 = document.getElementById('menumobile3');
+
+menumobile2.addEventListener('click', () => { 
+menu.style.display = 'block';
+menumobile.style.display = 'none';
+});
+
+menumobile3.addEventListener('click', () => { 
+menu.style.display = 'none';
+menumobile.style.display = 'block';
+});
+
+
+
+const menuElements = document.querySelectorAll('.menu');
+menuElements.forEach(element => {
+element.addEventListener('click', function () {
+if (window.innerWidth < 750 && menu) { 
+menu.style.display = 'none';
+menumobile.style.display = 'block';
+}
+});
+});
+
+
 
 // appartements ---------------------------------------------------------------------------------
 const appartements = [
