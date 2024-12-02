@@ -133,14 +133,14 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 #appartement {display:none; text-align:center; background:var(--beige3); color:var(--marron); width:100%; line-height:150%; padding-bottom:50px;  }
 #appartement .btn { margin:30px 0;}
-#appartement #grand img, #appartement #grand video {height:500px;  margin-bottom:5px; border-radius:5px; text-align:center; }
+#appartement #grand img, #appartement #grand video {height:500px;  margin-bottom:5px; border-radius:5px; text-align:center; background:var(--marron); }
 #appartement .photo {height:80px; margin:5px; border-radius:5px; cursor:pointer; }
 #appartement #appartementcontenu .photo:hover {opacity:0.9;}
 #appartement .titre {width:700px; margin:50px auto 30px auto; font-size:30px; font-weight:600; }
 #appartement .texte {width:700px; text-align:left; margin:15px auto; font-size:18px;}
 
 @media screen and (max-width: 700px) {
-#appartement #grand {max-width:90%; max-height:70vh;}
+#appartement #grand {height:70vh; }
 #appartement .titre {width:calc(100% - 50px); }
 #appartement .texte {width:calc(100% - 50px); }
 }
@@ -559,7 +559,7 @@ fermer.addEventListener('click', () => {
 fenetre.addEventListener("click", function(event) {
 grand.innerHTML = "";
 if (event.target.tagName === "IMG" && event.target.classList.contains("photo")) { grand.innerHTML = `<img src="${event.target.src}">`; }
-else if (event.target.tagName === "VIDEO" && event.target.classList.contains("photo")) { grand.innerHTML = `<video class="photo"><source src="${event.target.currentSrc}" type="video/mp4"></video>`; }
+else if (event.target.tagName === "VIDEO" && event.target.classList.contains("photo")) { grand.innerHTML = `<video class="photo" autoplay loop><source src="${event.target.currentSrc}" type="video/mp4"></video>`; }
 });
 
 
