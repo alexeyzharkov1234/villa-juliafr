@@ -94,7 +94,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 }
 @media screen and (max-width: 750px) {
   #menu {display:none; position:fixed; height:100vh; line-height:150%; padding-top:100px; }
-  #menu div, #menu a {display:block; font-size:35px; margin:40px 0;}
+  #menu div, #menu a {display:block; font-size:32px; margin:40px 0;}
   #menumobile {width:100%; line-height:0%; z-index:100; position:absolute; background:var(--marron4); padding:25px 0; color:white; font-weight:400;}
   #menumobile3 {display:block;}
 }
@@ -133,9 +133,9 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 #appartement {display:none; text-align:center; background:var(--beige3); color:var(--marron); width:100%; line-height:150%; padding-bottom:50px;  }
 #appartement .btn { margin:30px 0;}
-#appartement #grand {max-width:500px; max-height:500px; margin-bottom:5px; border-radius:5px; }
+#appartement #grand img, #appartement #grand video {height:500px;  margin-bottom:5px; border-radius:5px; }
 #appartement .photo {height:80px; margin:5px; border-radius:5px; cursor:pointer; }
-#appartement .photo:hover {opacity:0.9;}
+#appartement #appartementcontenu .photo:hover {opacity:0.9;}
 #appartement .titre {width:700px; margin:50px auto 30px auto; font-size:30px; font-weight:600; }
 #appartement .texte {width:700px; text-align:left; margin:15px auto; font-size:18px;}
 
@@ -209,8 +209,9 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 <div id="menu">
 
-<a class="menu" href="#appartements">Appartements</a>
+<a class="menu" href="#appartements">Nos appartements</a>
 <a class="menu" href="#reserver">Tarifs et Réservations</a>
+<a class="menu" href="#infospratiques">Informations pratiques</a>
 <a class="menu" href="#contact">Contact</a>
 <div class="menu">FR</div>
 
@@ -253,6 +254,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 <div id="appartement">
 
   <div id="fermer" class="btn">Fermer</div>
+  <div id="grand"></div>
   <div id="appartementcontenu"></div>
   
   </div>
@@ -480,7 +482,7 @@ menumobile.style.display = 'block';
 
 // appartements ---------------------------------------------------------------------------------
 const appartements = [
-{"titre":"Appartement 1","capacite":"1 à 2 personnes","description":["2 pièces: kitchenette avec coin repas + chambre: grande fenêtre (vue jardin)  + sdb + wc","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière","Chambre avec lit en 140, TV canal +, ventilateur , endoir à linge","SDB (douche) WC, sèche-cheveux,  sèche-serviettes","Elements de confort communs: lave-linge, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt1/1.jpeg","apt1/1.mov","apt1/2.jpeg","apt1/3.jpeg","apt1/4.jpeg","apt1/5.jpeg","apt1/6.jpeg","apt1/7.jpeg","apt1/8.jpeg"]},
+{"titre":"Appartement 1","capacite":"1 à 2 personnes","description":["2 pièces: kitchenette avec coin repas + chambre: grande fenêtre (vue jardin)  + sdb + wc","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière","Chambre avec lit en 140, TV canal +, ventilateur , endoir à linge","SDB (douche) WC, sèche-cheveux,  sèche-serviettes","Elements de confort communs: lave-linge, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt1/1.jpeg","apt1/1.mp4","apt1/2.jpeg","apt1/3.jpeg","apt1/5.jpeg","apt1/6.jpeg","apt1/7.jpeg","apt1/8.jpeg"]},
 {"titre":"Appartement 2","capacite":"1 à 2 personnes","description":["2 pièces: kitchenette avec coin repas spacieux+ chambre + sdb + wc","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, TV canal+","Chambre très spacieuse avec lit en 140 (matelas confort+), fauteuil convertible, canapé, TV canal +, ventilateur , endoir à linge,  2 grandes fenêtres (vue jardin) ","SDB (douche) WC, sèche-cheveux, sèche-serviettes ","Elements de confort communs: lave-linge , tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt2/1.jpeg","apt2/2.jpeg","apt2/3.jpeg","apt2/4.jpeg","apt2/5.jpeg","apt2/6.jpeg","apt2/7.jpeg","apt2/8.jpeg","apt2/9.jpeg","apt2/10.jpeg","apt2/11.jpeg"]},
 {"titre":"Appartement 3","capacite":"1 à 3 personnes","description":["2 pièces: kitchenette avec coin repas/séjour + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, TV canal+ *possibilité d'ajouter un canapé convertible en 140","Chambre avec lit en 140 (matelas confort+), armoire, TV canal +, ventilateur , endoir à linge,  grand fenêtre (vue jardin) ","SDB (douche) WC, sèche-cheveux,  sèche-serviettes", "Elements de confort communs: lave-linge, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt3/1.jpeg","apt3/2.jpeg","apt3/3.jpeg","apt3/4.jpeg","apt3/5.jpeg","apt3/6.jpeg","apt3/7.jpeg","apt3/8.jpeg","apt3/9.jpeg"]},
 {"titre":"Appartement 4","capacite":"1 à 2 personnes","description":["2 pièces: kitchenette avec coin repas + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière","Chambre avec lit en 140, armoire, TV canal +, ventilateur, endoir à linge ,grande fenetre (vue jardin)","SDB (cabine de douche) WC, sèche-cheveux, sèche-serviettes ", "Elements de confort communs: lave-linge , tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt4/1.jpeg","apt4/2.jpeg","apt4/3.jpeg","apt4/4.jpeg","apt4/5.jpeg"]},
@@ -513,6 +515,7 @@ let apt;
 const clicappartement = document.querySelectorAll('.appartement');
 const fermer = document.getElementById('fermer');
 const fenetre = document.getElementById('appartement');
+const grand = document.getElementById('grand');
 
 clicappartement.forEach(el => {
 el.addEventListener('click', (event) => {
@@ -531,10 +534,11 @@ const appartement = appartements.find(appartement => appartement.titre === apt);
 if (appartement) {
 
 appartementcontenu.innerHTML = "";
+grand.innerHTML = `<img src="${appartement.photos[0]}">`;
 let contenu= "";
-contenu += `<img id="grand" src="${appartement.photos[0]}"><br>`;
 appartement.photos.forEach(photo => { 
-contenu += `<img class="photo" src="${photo}?w=250" srcset="${photo}?w=250 250w" sizes="250px">`;
+if (photo.endsWith(".mp4")) { contenu += `<video class="photo" autoplay loop><source src="${photo}" type="video/mp4"></video>`; }
+else { contenu += `<img class="photo" src="${photo}?w=250" srcset="${photo}?w=250 250w" sizes="250px">`; }
 });
 contenu += `<div class="titre">${appartement.titre}</div><div class="texte">${appartement.capacite}</div>`;
 appartement.description.forEach(description => { contenu += `<div class="texte">${description}</div>`; });
@@ -553,10 +557,9 @@ fermer.addEventListener('click', () => {
 
 
 fenetre.addEventListener("click", function(event) {
-if (event.target.tagName === "IMG" && event.target.classList.contains("photo")) {
-const grandImage = document.getElementById("grand");
-if (grandImage) {grandImage.src = event.target.src;}
-}
+grand.innerHTML = "";
+if (event.target.tagName === "IMG" && event.target.classList.contains("photo")) { grand.innerHTML = `<img src="${event.target.src}">`; }
+else if (event.target.tagName === "VIDEO" && event.target.classList.contains("photo")) { console.log(event.target.currentSrc); grand.innerHTML = `<video class="photo" autoplay loop><source src="${event.target.currentSrc}" type="video/mp4"></video>`; }
 });
 
 
