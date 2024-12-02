@@ -25,6 +25,7 @@
 --marron: rgb(100,38,1);
 --marron2: rgb(179, 139, 114);
 --marron3: rgba(100,38,1,0.85);
+--marron4: rgba(179,139,114,0.85);
 --2marron: rgb(69,52,42);
 }
 
@@ -84,17 +85,17 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 #menu div, #menu a {margin:1px 15px; color:white; vertical-align:middle; display:inline-block; }
 #menu span:hover, #menu a:hover {cursor:pointer; text-decoration:underline;  }
 
-#menumobile1 {position:absolute; top:25px; left:25px;}
-#menumobile2 {position:absolute; top:25px; right:25px;}
+#menumobile1 {position:absolute; left:25px;}
+#menumobile2 {position:absolute; right:25px;}
 #menumobile3 {display:none; position:fixed; top:15px; right:25px;}
 
 @media screen and (min-width: 750px) {
-  #menumobile {display:none;}
+  #menumobile {display:none; }
 }
 @media screen and (max-width: 750px) {
   #menu {display:none; position:fixed; height:100vh; line-height:150%; padding-top:100px; }
-  #menu div, #menu a {display:block; font-size:35px; margin:40px 0; }
-  #menumobile {width:100%; z-index:100; position:absolute; /*background:var(--marron2); padding:25px 0;*/ color:white; font-weight:400;}
+  #menu div, #menu a {display:block; font-size:35px; margin:40px 0;}
+  #menumobile {width:100%; line-height:0%; z-index:100; position:absolute; background:var(--marron4); padding:25px 0; color:white; font-weight:400;}
   #menumobile3 {display:block;}
 }
 
