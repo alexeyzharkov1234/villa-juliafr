@@ -113,7 +113,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 #appartements a {color:var(--marron); }
 #appartements h1 {/*margin-bottom:50px;*/}
 #appartements p, #appartements ul {text-align:left; width:400px; margin:20px auto; line-height:150%; }
-#appartements .appartement {width:250px; font-size:18px; margin:40px; display:inline-block;}
+#appartements .appartement {width:250px; font-size:18px; margin:40px; display:inline-block; vertical-align:top; }
 #appartements .appartement:hover {cursor:pointer; opacity:0.9; }
 #appartements .appartement img {height:250px; width:250px;  object-fit: cover; object-position: center; border-radius:50%; margin-bottom:15px; }
 #appartements .appartement .titre {margin-bottom:0px; font-weight:600;}
@@ -137,11 +137,11 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 #appartement .photo {height:80px; margin:5px; border-radius:5px; cursor:pointer;  }
 #appartement #appartementcontenu .photo {background:var(--marron); }
 #appartement #appartementcontenu .photo:hover {opacity:0.9;}
-#appartement .titre {width:700px; margin:50px auto 30px auto; font-size:30px; font-weight:600; }
+#appartement .titre {width:700px; margin:50px auto 30px auto; font-size:30px; font-weight:600; line-height:135%; }
 #appartement .texte {width:700px; text-align:left; margin:15px auto; font-size:18px;}
 
-@media screen and (max-width: 700px) {
-#appartement #grand {height:70vh; }
+@media screen and (max-width: 750px) {
+#appartement #grand img, #appartement #grand video {height:70vh; max-width:90%; }
 #appartement .titre {width:calc(100% - 50px); }
 #appartement .texte {width:calc(100% - 50px); }
 }
@@ -214,7 +214,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 <a class="menu" href="#reserver">Tarifs et Réservations</a>
 <a class="menu" href="#infospratiques">Informations pratiques</a>
 <a class="menu" href="#contact">Contact</a>
-<div class="menu">FR</div>
+<a class="menu" href="lang.html">FR</a>
 
 <span id="menumobile3">Fermer</span>
 
@@ -489,6 +489,7 @@ const appartements = [
 {"titre":"Appartement 4","capacite":"1 à 2 personnes","description":["2 pièces: kitchenette avec coin repas + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière","Chambre avec lit en 140, armoire, TV canal +, ventilateur, endoir à linge ,grande fenetre (vue jardin)","SDB (cabine de douche) WC, sèche-cheveux, sèche-serviettes ", "Elements de confort communs: lave-linge , tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt4/1.jpeg","apt4/2.jpeg","apt4/3.jpeg","apt4/4.jpeg","apt4/5.jpeg"]},
 {"titre":"Appartement 5","capacite":"2 à 4 personnes","description":["2 pièces: kitchenette avec coin repas/séjour (canapé convertible en 140) + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière,  ventilateur, TV canal+","Chambre très spacieuse avec lit en 140 (matelas confort+), vue jardin, très grande armoire, TV canal+, climatiseur, endoir à linge","SDB (cabine de douche) WC, sèche-cheveux, sèche-serviettes ","Elements de confort communs: lave-linge, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt5/1.jpeg","apt5/2.jpeg","apt5/3.jpeg","apt5/4.jpeg","apt5/5.jpeg","apt5/6.jpeg","apt5/7.jpeg","apt5/8.jpeg","apt5/9.jpeg","apt5/10.jpeg","apt5/11.jpeg"]},
 {"titre":"Appartement 6","capacite":"2 à 4 personnes","description":["2 pièces: kitchenette avec coin repas/séjour (canapé convertible en 140) + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, TV canal+, ventilateur ","Chambre avec lit en 140, vue jardin, armoire, TV canal+, climatiseur, endoir à linge ","SDB spacieuse avec fenêtre(cabine de douche) WC, sèche-cheveux, sèche-serviettes ","Elements de confort communs: lave-linge, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt6/1.jpeg","apt6/2.jpeg","apt6/3.jpeg","apt6/4.jpeg","apt6/5.jpeg","apt6/6.jpeg","apt6/7.jpeg"]},
+{"titre":"Appartement Balcony Garden View","capacite":"2 à 4 personnes","description":["Cet appartement confortable, situé au premier étage (avec ascenseur), dispose de deux balcons avec vue sur la place des palmiers et le parc. Il se trouve à 100 m de la Villa Julia, d’un bar/épicerie et de l’arrêt du bus thermal gratuit.","2 pièces: kitchenette avec coin repas/séjour (canapé convertible en 140) + chambre + sdb + wc","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, ventilateur, TV canal+, balcon","Chambre avec lit en 140, armoire, endoir à linge, table à repasser et fer à repasser, balcon","SDB (baignoire) WC, sèche-cheveux, lave-linge","Parking à proximité (gratuit), WIFI gratuit"],"photos":["apt7/1.jpeg","apt7/2.jpeg","apt7/3.jpeg","apt7/4.jpeg","apt7/5.jpeg","apt7/6.jpeg"]},
 ];
 
 
@@ -541,9 +542,9 @@ appartement.photos.forEach(photo => {
 if (photo.endsWith(".mp4")) { contenu += `<video class="photo"><source src="${photo}" type="video/mp4"></video>`; }
 else { contenu += `<img class="photo" src="${photo}?w=250" srcset="${photo}?w=250 250w" sizes="250px">`; }
 });
-contenu += `<div class="titre">${appartement.titre}</div><div class="texte">${appartement.capacite}</div>`;
+contenu += `<div class="titre">${appartement.titre}</div>`;
 appartement.description.forEach(description => { contenu += `<div class="texte">${description}</div>`; });
-contenu += '<a href="#reserver" class="btn">Réserver cet appartement</a>';
+contenu += `<div class="texte">${appartement.capacite}</div><a href="#reserver" class="btn">Réserver cet appartement</a>`;
 appartementcontenu.innerHTML = contenu;
 }
 
