@@ -1,0 +1,192 @@
+
+@font-face {
+  font-family: 'BlackmoorCom'; /* Nom que vous donnerez à la police */
+  src: url('BlackmoorCom/BlackmoorCom.woff2') format('woff2'), /* Chemin vers la police */
+       url('BlackmoorCom/BlackmoorCom.woff') format('woff'), /* Fournir plusieurs formats pour une meilleure compatibilité */
+       url('BlackmoorCom/BlackmoorCom.ttf') format('truetype');
+  font-weight: normal; /* Poids de la police */
+  font-style: normal; /* Style de la police */
+}
+
+:root {
+--beige: rgb(246, 228, 209);
+--beige2: rgb(239, 216, 192);
+--beige3: rgb(242, 224, 203);
+--marron: rgb(100,38,1);
+--marron2: rgb(179, 139, 114);
+--marron3: rgba(100,38,1,0.85);
+--marron4: rgba(179,139,114,0.85);
+--2marron: rgb(69,52,42);
+}
+
+
+body, html {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif;
+margin: 0;
+padding: 0;
+width:100%;
+height: 100%;
+background:var(--beige);
+line-height:0;
+}
+
+/*select {appearance: none; -moz-appearance: none; -webkit-appearance: none; border: 0; padding: 0; margin: 0; background: transparent; color: inherit; font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; }*/
+a {text-decoration:none; color:white;}
+
+h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; font-size:45px;  color:var(--marron); padding:0; margin:0; line-height:120%; margin-bottom:25px; }
+
+
+.photobg {position:relative; margin:0; width:50%; height:100vh; display:inline-block;  object-fit: cover; object-position: center; background-position: center; background-repeat: no-repeat; background-size: cover;}
+.bloc {position:relative; margin:0; width:50%; height:100vh; display:inline-block;  text-align:center;}
+.contenu {  margin:0 auto; width:500px; font-size:20px; color: var(--marron); line-height:1.4em; }
+.contenu img { width:200px; margin-bottom:15px;  }
+.contenu p a {color:var(--marron); text-decoration:underline; }
+.contenu p a:hover {text-decoration:none; }
+.mobile {display:none;}
+
+
+.slider .precedent {position:absolute; top:calc(50% - 25px); left:5px; width:50px; cursor:pointer; }
+.slider .suivant {position:absolute; top:calc(50% - 25px); right:5px; width:50px; cursor:pointer; }
+
+@media screen and (min-width: 750px) {
+  .contenu {position:absolute; left:50%; top: 50%; transform: translateX(-50%) translateY(-50%) ;}
+}
+
+@media screen and (max-width: 1150px) {.contenu {width:400px;}}
+@media screen and (max-width: 950px) {.contenu {width:300px;}}
+
+@media screen and (max-width: 750px) {
+  .photobg {width:100%; height:100vh;}
+  .bloc {width:100%; height:auto; padding:0; margin:0; }
+  .contenu {width:calc(100% - 50px); padding:60px 25px 50px 25px; margin:0; }
+  .pc {display:none;}
+  .mobile {display:block;}
+  h1 {font-size:35px;}
+}
+
+
+.btn {display:inline-block; background:var(--marron3); color:white; padding:7px 21px; margin:5px;  border-radius:5px; font-size:18px; text-align:center;  }
+.btn-light { background:var(--beige); border:solid 1px var(--marron); color:var(--marron); }
+.btn:hover { cursor:pointer;opacity:0.9; }
+
+
+#menu {z-index:100; width:100%; background:var(--marron2); padding:25px 0; color:white; font-weight:400; font-size:16px; text-align:center; }
+#menu div, #menu a {margin:1px 15px; color:white; vertical-align:middle; display:inline-block; }
+#menu span:hover, #menu a:hover {cursor:pointer; text-decoration:underline;  }
+
+#menumobile1 {position:absolute; left:25px;}
+#menumobile2 {position:absolute; right:25px;}
+#menumobile3 {display:none; position:fixed; top:15px; right:25px;}
+
+@media screen and (min-width: 750px) {
+  #menumobile {display:none; }
+}
+@media screen and (max-width: 750px) {
+  #menu {display:none; position:fixed; height:100vh; line-height:150%; padding-top:100px; }
+  #menu div, #menu a {display:block; font-size:32px; margin:40px 0;}
+  #menumobile {width:100%; line-height:0%; z-index:100; position:absolute; background:var(--marron4); padding:25px 0; color:white; font-weight:400;}
+  #menumobile3 {display:block;}
+}
+
+#accueil {text-align:center;}
+#accueil h1 {font-family: 'BlackmoorCom', Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambria", "Garamond", "Bodoni MT", Times, "Times New Roman", serif; text-transform:uppercase; font-size:50px;  letter-spacing:4px; word-spacing:5px; margin-bottom:25px; text-align:center;}
+#accueil .btn {margin-top:20px; }
+
+@media screen and (max-width: 700px) {
+#accueil h1 {font-size:45px;}
+}
+
+
+
+#appartements { color:var(--marron); width:calc(100% - 80px); background:var(--beige2); text-align:center; font-size:20px; padding:80px 40px; line-height:125%;  }
+#appartements a {color:var(--marron); }
+#appartements h1 {/*margin-bottom:50px;*/}
+#appartements p, #appartements ul {text-align:left; width:400px; margin:20px auto; line-height:150%; }
+#appartements .appartement {width:250px; font-size:18px; margin:40px; display:inline-block; vertical-align:top; }
+#appartements .appartement:hover {cursor:pointer; opacity:0.9; }
+#appartements .appartement img {height:250px; width:250px;  object-fit: cover; object-position: center; border-radius:50%; margin-bottom:15px; }
+#appartements .appartement .titre {margin-bottom:0px; font-weight:600;}
+#appartements .appartement .soustitre {margin-bottom:10px;}
+#appartements #total {display:inline-block; background:var(--beige); border:solid 1px var(--marron); border-radius:10px; margin-top:20px; padding: 20px 20px 20px 30px; }
+#appartements #total #devise {margin-right:10px; }
+#appartements #total .titre { font-weight:900; margin-right:20px;}
+
+@media screen and (max-width: 700px) {
+#appartements p, #appartements ul { width:calc(100% - 50px); }
+#appartements {width:100%;padding:50px 0;}
+#appartements .appartement {width:calc(50% - 40px); margin:30px 10px; padding:0; }
+#appartements .appartement img {border-radius:5px; width:100%; height:250px; } 
+}
+
+
+
+#appartement {display:none; text-align:center; background:var(--beige3); color:var(--marron); width:100%; line-height:150%; padding-bottom:50px;  }
+#appartement .btn { margin:30px 0;}
+#appartement #grand img, #appartement #grand video {height:500px;  margin-bottom:5px; border-radius:5px; text-align:center; }
+#appartement .photo {height:80px; margin:5px; border-radius:5px; cursor:pointer;  }
+#appartement #appartementcontenu .photo {background:var(--marron); }
+#appartement #appartementcontenu .photo:hover {opacity:0.9;}
+#appartement .titre {width:700px; margin:50px auto 30px auto; font-size:30px; font-weight:600; line-height:135%; }
+#appartement .texte {width:700px; text-align:left; margin:15px auto; font-size:18px;}
+
+@media screen and (max-width: 750px) {
+#appartement #grand img, #appartement #grand video {height:70vh; max-width:90%; }
+#appartement .titre {width:calc(100% - 50px); }
+#appartement .texte {width:calc(100% - 50px); }
+}
+
+
+#reserver { width:50%; display:inline-block; vertical-align:top; background:var(--beige2); text-align:center; padding: 100px 0; line-height:150%; }
+#reserver h1 {margin-left:25px; margin-right:25px; }
+#reserver p { width:500px; font-size:20px; color: var(--marron); line-height:1.4em; margin-bottom:45px; margin-left:auto; margin-right:auto; }
+#reserver input, #reserver select, #reserver textarea {all:unset; width:500px; display:block; font-size:18px; background:white; border:solid 1px rgb(200,200,200); color:black; padding:10px 15px; margin:10px auto; border-radius:5px; text-align:left; font-weight:400; }
+#reserver textarea {height:200px;}
+#reserver button {all:unset; background:var(--marron3); color:white; padding:7px 21px; margin:5px;  border-radius:5px; font-size:18px; text-align:center;}
+#deux {display:none;}
+
+@media screen and (max-width: 1100px) {
+#reserver p, #reserver input, #reserver select, #reserver textarea {width:calc(100% - 50px); }
+}
+
+@media screen and (max-width: 750px) {
+  #reserver {width:100%; padding:60px 0 50px 0;}
+}
+
+#infospratiques { width:50%; display:inline-block; vertical-align:top; text-align:center; padding: 100px 0; line-height:150%; }
+#infospratiques h1 {margin-left:25px; margin-right:25px; }
+#infospratiques p {width:500px; font-size:20px; color: var(--marron); line-height:1.4em; text-align:left; margin-left:auto; margin-right:auto; }
+
+@media screen and (max-width: 1100px) {
+#infospratiques p {width:calc(100% - 50px); }
+}
+
+@media screen and (max-width: 750px) {
+  #infospratiques {width:100%; padding:60px 0 50px 0;}
+}
+
+/*
+#calendrier { text-align:left; background:var(--beige); border:solid 1px var(--marron); margin:5px auto; padding:20px 10px 10px 10px; border-radius:10px; display:none; position:relative; width:280px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+
+#calendrier #mois {text-transform:capitalize; text-align:center; font-weight:900; margin:0 10px 20px 10px;}
+#calendrier #mois-precedent, #calendrier #mois-suivant { cursor:pointer;  }
+#calendrier #mois-precedent {position:absolute; top:20px; left:20px;}
+#calendrier #mois-suivant {position:absolute; top:20px; right:20px;}
+
+#calendrier .semaine {width:40px; height:25px; display:inline-block; text-align:center;}
+#calendrier #espace {height:30px; display:none; vertical-align:middle; }
+
+#calendrier .date {width:40px; padding:7px 0; display:inline-block; text-align:center; font-weight:900; opacity:0.25; }
+
+#calendrier .noir {opacity:1;  }
+#calendrier .noir:hover{background:rgba(0,0,0,0.05); border-radius:10px; cursor:pointer; }
+
+#calendrier .btn {width:calc(100% - 50px); margin-top:20px; }
+*/
+
+#contact {background:var(--marron2); color:white; display:inline-block; }
+#contact h1 {color:white;}
+#contact .contenu { color:white; text-align:left;}
+
+#googlemap {width:50%; height:100vh; display:inline-block; }
+@media screen and (max-width: 750px) {#googlemap {width:100%; }}
