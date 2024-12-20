@@ -96,7 +96,7 @@ appartements = [
         "Bathroom (shower cabin) WC, hair dryer, towel heater",
         "Shared comfort elements: washing machine, ironing boards and irons, 2 terraces, small library, board games, nearby parking, free WIFI"
       ],
-      "photos": ["apt5/1.jpeg", "apt5/2.jpeg", "apt5/3.jpeg", "apt5/4.jpeg", "apt5/5.jpeg", "apt5/6.jpeg", "apt5/7.jpeg", "apt5/8.jpeg", "apt5/9.jpeg", "apt5/10.jpeg", "apt5/11.jpeg"]
+      "photos": ["apt5/1.jpeg","apt5/1.mp4", "apt5/2.jpeg", "apt5/3.jpeg", "apt5/4.jpeg", "apt5/5.jpeg", "apt5/6.jpeg", "apt5/7.jpeg", "apt5/8.jpeg", "apt5/9.jpeg", "apt5/10.jpeg", "apt5/11.jpeg"]
     },
     {
       "titre": "Apartment 6",
@@ -241,6 +241,7 @@ appartements = [
       ],
       "photos": [
         "apt5/1.jpeg",
+        "apt5/1.mp4",
         "apt5/2.jpeg",
         "apt5/3.jpeg",
         "apt5/4.jpeg",
@@ -317,7 +318,7 @@ appartements = [
     {"titre":"Appartement 2","capacite":"1 à 2 personnes","description":["2 pièces: kitchenette avec coin repas spacieux+ chambre + sdb + wc","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, TV canal+","Chambre très spacieuse avec lit en 140 (matelas confort+), fauteuil convertible, canapé, TV canal +, ventilateur , endoir à linge,  2 grandes fenêtres (vue jardin) ","SDB (douche) WC, sèche-cheveux, sèche-serviettes ","Elements de confort communs: lave-linge , tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt2/1.jpeg","apt2/2.jpeg","apt2/3.jpeg","apt2/4.jpeg","apt2/5.jpeg","apt2/6.jpeg","apt2/7.jpeg","apt2/8.jpeg","apt2/9.jpeg","apt2/10.jpeg","apt2/11.jpeg"]},
     {"titre":"Appartement 3","capacite":"1 à 3 personnes","description":["2 pièces: kitchenette avec coin repas/séjour + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, TV canal+ *possibilité d'ajouter un canapé convertible en 140","Chambre avec lit en 140 (matelas confort+), armoire, TV canal +, ventilateur , endoir à linge,  grand fenêtre (vue jardin) ","SDB (douche) WC, sèche-cheveux,  sèche-serviettes", "Elements de confort communs: lave-linge, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt3/1.jpeg","apt3/2.jpeg","apt3/3.jpeg","apt3/4.jpeg","apt3/5.jpeg","apt3/6.jpeg","apt3/7.jpeg","apt3/8.jpeg","apt3/9.jpeg"]},
     {"titre":"Appartement 4","capacite":"1 à 2 personnes","description":["2 pièces: kitchenette avec coin repas + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière","Chambre avec lit en 140, armoire, TV canal +, ventilateur, endoir à linge ,grande fenetre (vue jardin)","SDB (cabine de douche) WC, sèche-cheveux, sèche-serviettes ", "Elements de confort communs: lave-linge , tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt4/1.jpeg","apt4/2.jpeg","apt4/3.jpeg","apt4/4.jpeg","apt4/5.jpeg"]},
-    {"titre":"Appartement 5","capacite":"2 à 4 personnes","description":["2 pièces: kitchenette avec coin repas/séjour (canapé convertible en 140) + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière,  ventilateur, TV canal+","Chambre très spacieuse avec lit en 140 (matelas confort+), vue jardin, très grande armoire, TV canal+, climatiseur, endoir à linge","SDB (cabine de douche) WC, sèche-cheveux, sèche-serviettes ","Elements de confort communs: lave-linge, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt5/1.jpeg","apt5/2.jpeg","apt5/3.jpeg","apt5/4.jpeg","apt5/5.jpeg","apt5/6.jpeg","apt5/7.jpeg","apt5/8.jpeg","apt5/9.jpeg","apt5/10.jpeg","apt5/11.jpeg"]},
+    {"titre":"Appartement 5","capacite":"2 à 4 personnes","description":["2 pièces: kitchenette avec coin repas/séjour (canapé convertible en 140) + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière,  ventilateur, TV canal+","Chambre très spacieuse avec lit en 140 (matelas confort+), vue jardin, très grande armoire, TV canal+, climatiseur, endoir à linge","SDB (cabine de douche) WC, sèche-cheveux, sèche-serviettes ","Elements de confort communs: lave-linge, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt5/1.jpeg","apt5/1.mp4","apt5/2.jpeg","apt5/3.jpeg","apt5/4.jpeg","apt5/5.jpeg","apt5/6.jpeg","apt5/7.jpeg","apt5/8.jpeg","apt5/9.jpeg","apt5/10.jpeg","apt5/11.jpeg"]},
     {"titre":"Appartement 6","capacite":"2 à 4 personnes","description":["2 pièces: kitchenette avec coin repas/séjour (canapé convertible en 140) + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, TV canal+, ventilateur ","Chambre avec lit en 140, vue jardin, armoire, TV canal+, climatiseur, endoir à linge ","SDB spacieuse avec fenêtre(cabine de douche) WC, sèche-cheveux, sèche-serviettes ","Elements de confort communs: lave-linge, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt6/1.jpeg","apt6/2.jpeg","apt6/3.jpeg","apt6/4.jpeg","apt6/5.jpeg","apt6/6.jpeg","apt6/7.jpeg"]},
     {"titre":"Appartement Balcony Garden View","capacite":"2 à 4 personnes","description":["Cet appartement confortable, situé dans une autre résidence au premier étage (avec ascenseur), à 100 mètres de la Villa Julia, d’un bar/épicerie et de l’arrêt du bus thermal gratuit, dispose de deux balcons avec vue sur la Place des Palmiers et le parc.","2 pièces: kitchenette avec coin repas/séjour (canapé convertible en 140) + chambre + sdb + wc","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, ventilateur, TV canal+, balcon","Chambre avec lit en 140, armoire, endoir à linge, table à repasser et fer à repasser, balcon","SDB (baignoire) WC, sèche-cheveux, lave-linge","Parking à proximité (gratuit), WIFI gratuit"],"photos":["apt7/1.jpeg","apt7/2.jpeg","apt7/3.jpeg","apt7/4.jpeg","apt7/5.jpeg","apt7/6.jpeg"]},
     ];
@@ -399,7 +400,7 @@ appartements = [
         "Bagno (cabina doccia) WC, asciugacapelli, scalda-salviette",
         "Elementi di comfort comuni: lavatrice, tavoli da stiro e ferri da stiro, 2 terrazze, piccola biblioteca, giochi da tavolo, parcheggio nelle vicinanze, WIFI gratuito"
       ],
-      "photos": ["apt5/1.jpeg", "apt5/2.jpeg", "apt5/3.jpeg", "apt5/4.jpeg", "apt5/5.jpeg", "apt5/6.jpeg", "apt5/7.jpeg", "apt5/8.jpeg", "apt5/9.jpeg", "apt5/10.jpeg", "apt5/11.jpeg"]
+      "photos": ["apt5/1.jpeg", "apt5/1.mp4", "apt5/2.jpeg", "apt5/3.jpeg", "apt5/4.jpeg", "apt5/5.jpeg", "apt5/6.jpeg", "apt5/7.jpeg", "apt5/8.jpeg", "apt5/9.jpeg", "apt5/10.jpeg", "apt5/11.jpeg"]
     },
     {
       "titre": "Appartamento 6",
@@ -505,7 +506,7 @@ appartements = [
         "Ванная комната (душевая кабина), туалет, фен, полотенцесушитель",
         "Элементы общего комфорта: стиральная машина, гладильные столы и утюги, 2 террасы, небольшая библиотека, настольные игры, парковка рядом, бесплатный Wi-Fi"
       ],
-      "photos": ["apt5/1.jpeg", "apt5/2.jpeg", "apt5/3.jpeg", "apt5/4.jpeg", "apt5/5.jpeg", "apt5/6.jpeg", "apt5/7.jpeg", "apt5/8.jpeg", "apt5/9.jpeg", "apt5/10.jpeg", "apt5/11.jpeg"]
+      "photos": ["apt5/1.jpeg", "apt5/1.mp4", "apt5/2.jpeg", "apt5/3.jpeg", "apt5/4.jpeg", "apt5/5.jpeg", "apt5/6.jpeg", "apt5/7.jpeg", "apt5/8.jpeg", "apt5/9.jpeg", "apt5/10.jpeg", "apt5/11.jpeg"]
     },
     {
       "titre": "Апартамент 6",
