@@ -116,7 +116,7 @@ appartements = [
       "description": [
         "This cozy apartment, located in another residence on the first floor (with elevator), 100 meters from Villa Julia, a bar/grocery store, and the free thermal bus stop, features two balconies overlooking Palm Tree Square and the park.",
         "2 rooms: kitchenette with dining/living area (140 cm sofa bed) + bedroom + bathroom + toilet",
-        "Kitchenette: microwave, fridge/freezer, mini oven, electric hob, kettle, toaster, coffee maker, fan, Canal+ TV, balcony",
+        "Kitchenette: dishwasher, microwave, fridge/freezer, mini oven, electric hob, kettle, toaster, coffee maker, fan, Canal+ TV, balcony",
         "Bedroom with 140 cm bed, wardrobe, clothes storage, ironing board and iron, balcony",
         "Bathroom (bathtub) WC, hair dryer, washing machine",
         "Nearby parking (free), free WIFI"
@@ -280,7 +280,7 @@ appartements = [
       "description": [
         "Este acogedor apartamento, ubicado en otra residencia en el primer piso (con ascensor), a 100 metros de Villa Julia, de un bar/tienda de comestibles y de la parada del autobús termal gratuito, cuenta con dos balcones con vistas a la Plaza de las Palmas y al parque.",
         "2 piezas: kitchenette con área de comedor/sala de estar (sofá cama de 140) + habitación + baño + WC",
-        "Kitchenette: microondas, frigorífico/congelador, mini-horno, placa eléctrica, hervidor, tostadora, cafetera, ventilador, TV canal+, balcón",
+        "Kitchenette: lavavajillas, microondas, frigorífico/congelador, mini-horno, placa eléctrica, hervidor, tostadora, cafetera, ventilador, TV canal+, balcón",
         "Habitación con cama de 140, armario, tendedero, tabla de planchar y plancha, balcón",
         "Baño (bañera) WC, secador de pelo, lavadora",
         "Estacionamiento cercano (gratuito), WIFI gratuito"
@@ -320,7 +320,7 @@ appartements = [
     {"titre":"Appartement 4","capacite":"1 à 2 personnes","description":["2 pièces: kitchenette avec coin repas + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière","Chambre avec lit en 140, armoire, TV canal +, ventilateur, endoir à linge ,grande fenetre (vue jardin)","SDB (cabine de douche) WC, sèche-cheveux, sèche-serviettes ", "Elements de confort communs: lave-linge , tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt4/1.jpeg","apt4/2.jpeg","apt4/3.jpeg","apt4/4.jpeg","apt4/5.jpeg"]},
     {"titre":"Appartement 5","capacite":"2 à 4 personnes","description":["2 pièces: kitchenette avec coin repas/séjour (canapé convertible en 140) + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière,  ventilateur, TV canal+","Chambre très spacieuse avec lit en 140 (matelas confort+), vue jardin, très grande armoire, TV canal+, climatiseur, endoir à linge","SDB (cabine de douche) WC, sèche-cheveux, sèche-serviettes ","Elements de confort communs: lave-linge, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt5/1.jpeg","apt5/1.mp4","apt5/2.jpeg","apt5/3.jpeg","apt5/4.jpeg","apt5/5.jpeg","apt5/6.jpeg","apt5/7.jpeg","apt5/8.jpeg","apt5/9.jpeg","apt5/10.jpeg","apt5/11.jpeg"]},
     {"titre":"Appartement 6","capacite":"2 à 4 personnes","description":["2 pièces: kitchenette avec coin repas/séjour (canapé convertible en 140) + chambre + sdb + wc ","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, TV canal+, ventilateur ","Chambre avec lit en 140, vue jardin, armoire, TV canal+, climatiseur, endoir à linge ","SDB spacieuse avec fenêtre(cabine de douche) WC, sèche-cheveux, sèche-serviettes ","Elements de confort communs: lave-linge, tables à repasser et fers à repasser, 2 terrasses, petite bibliothèque, jeux de table, parking à proximité, WIFI gratuit"],"photos":["apt6/1.jpeg","apt6/2.jpeg","apt6/3.jpeg","apt6/4.jpeg","apt6/5.jpeg","apt6/6.jpeg","apt6/7.jpeg"]},
-    {"titre":"Appartement Balcony Garden View","capacite":"2 à 4 personnes","description":["Cet appartement confortable, situé dans une autre résidence au premier étage (avec ascenseur), à 100 mètres de la Villa Julia, d’un bar/épicerie et de l’arrêt du bus thermal gratuit, dispose de deux balcons avec vue sur la Place des Palmiers et le parc.","2 pièces: kitchenette avec coin repas/séjour (canapé convertible en 140) + chambre + sdb + wc","Kitchenette: micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, ventilateur, TV canal+, balcon","Chambre avec lit en 140, armoire, endoir à linge, table à repasser et fer à repasser, balcon","SDB (baignoire) WC, sèche-cheveux, lave-linge","Parking à proximité (gratuit), WIFI gratuit"],"photos":["apt7/1.jpeg","apt7/2.jpeg","apt7/3.jpeg","apt7/4.jpeg","apt7/5.jpeg","apt7/6.jpeg"]},
+    {"titre":"Appartement Balcony Garden View","capacite":"2 à 4 personnes","description":["Cet appartement confortable, situé dans une autre résidence au premier étage (avec ascenseur), à 100 mètres de la Villa Julia, d’un bar/épicerie et de l’arrêt du bus thermal gratuit, dispose de deux balcons avec vue sur la Place des Palmiers et le parc.","2 pièces: kitchenette avec coin repas/séjour (canapé convertible en 140) + chambre + sdb + wc","Kitchenette: lave-vaisselle, micro-ondes, frigo/congélateur, mini-four, plaque électrique, bouilloire, grille-pain, cafetière, ventilateur, TV canal+, balcon","Chambre avec lit en 140, armoire, endoir à linge, table à repasser et fer à repasser, balcon","SDB (baignoire) WC, sèche-cheveux, lave-linge","Parking à proximité (gratuit), WIFI gratuit"],"photos":["apt7/1.jpeg","apt7/2.jpeg","apt7/3.jpeg","apt7/4.jpeg","apt7/5.jpeg","apt7/6.jpeg"]},
     ];
 
 // Générer le HTML pour chaque appartement
@@ -420,7 +420,7 @@ appartements = [
       "description": [
         "Questo appartamento confortevole, situato in un’altra residenza al primo piano (con ascensore), a 100 metri da Villa Julia, da un bar/negozio di alimentari e dalla fermata del bus termale gratuito, dispone di due balconi con vista su Piazza delle Palme e sul parco.",
         "2 stanze: angolo cottura con zona pranzo/soggiorno (divano letto da 140 cm) + camera + bagno + WC",
-        "Angolo cottura: microonde, frigorifero/congelatore, mini-forno, piastre elettriche, bollitore, tostapane, macchina da caffè, ventilatore, TV canale+, balcone",
+        "Angolo cottura: lavastoviglie, microonde, frigorifero/congelatore, mini-forno, piastre elettriche, bollitore, tostapane, macchina da caffè, ventilatore, TV canale+, balcone",
         "Camera con letto da 140 cm, armadio, stendibiancheria, tavolo da stiro e ferro da stiro, balcone",
         "Bagno (vasca) WC, asciugacapelli, lavatrice",
         "Parcheggio nelle vicinanze (gratuito), WIFI gratuito"
@@ -526,7 +526,7 @@ appartements = [
       "description": [
         "Эти уютные апартаменты, расположенные в другом жилом доме на первом этаже (с лифтом), в 100 метрах от Виллы Джулия, бара/продуктового магазина и остановки бесплатного термального автобуса, имеют два балкона с видом на Площадь Пальм и парк.",
         "2 комнаты: мини-кухня с обеденной зоной/гостиной (раскладной диван 140 см) + спальня + ванная комната + туалет",
-        "Мини-кухня: микроволновая печь, холодильник/морозильник, мини-духовка, электрическая плита, чайник, тостер, кофеварка, вентилятор, телевизор с каналом+, балкон",
+        "Мини-кухня: посудомойка, микроволновая печь, холодильник/морозильник, мини-духовка, электрическая плита, чайник, тостер, кофеварка, вентилятор, телевизор с каналом+, балкон",
         "Спальня с кроватью 140 см, шкаф, сушилка для белья, гладильная доска и утюг, балкон",
         "Ванная комната (ванна), туалет, фен, стиральная машина",
         "Парковка рядом (бесплатно), бесплатный Wi-Fi"

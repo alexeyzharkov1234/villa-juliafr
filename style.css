@@ -61,6 +61,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
   .bloc {width:100%; height:auto; padding:0; margin:0; }
   .contenu {width:calc(100% - 50px); padding:60px 25px 50px 25px; margin:0; }
   .pc {display:none;}
+  .pc img {display:none;}
   .mobile {display:block;}
   h1 {font-size:35px;}
 }
@@ -71,7 +72,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 .btn:hover { cursor:pointer;opacity:0.9; }
 
 
-#menu {z-index:100; width:100%; background:var(--marron2); padding:25px 0; color:white; font-weight:400; font-size:16px; text-align:center; }
+#menu {z-index:100; width:100%; background:var(--marron2); padding:15px 0; color:white; font-weight:400; font-size:16px; text-align:center; }
 #menu div, #menu a {margin:1px 15px; color:white; vertical-align:middle; display:inline-block; }
 #menu span:hover, #menu a:hover {cursor:pointer; text-decoration:underline;  }
 #menu img {width:25px;margin-right:-25px;}
@@ -79,6 +80,8 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 #menumobile1 {position:absolute; left:25px;}
 #menumobile2 {position:absolute; right:25px;}
 #menumobile3 {display:none; position:fixed; top:15px; right:25px;}
+#menumobile .social {position:absolute; top:10px; left:calc(50% - 35px);}
+#menumobile .social img {width:25px; margin:0 5px; }
 
 @media screen and (min-width: 750px) {
   #menumobile {display:none; }
@@ -86,7 +89,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 @media screen and (max-width: 750px) {
   #menu {display:none; position:fixed; height:100vh; line-height:150%; padding-top:100px; }
   #menu div, #menu a {display:block; font-size:32px; margin:40px 0;}
-  #menumobile {width:100%; line-height:0%; z-index:100; position:absolute; background:var(--marron4); padding:25px 0; color:white; font-weight:400;}
+  #menumobile {width:100%; text-align:center; line-height:0%; z-index:100; position:absolute; background:var(--marron4); padding:25px 0; color:white; font-weight:400;}
   #menumobile3 {display:block;}
   #menu img {width:35px; margin-right:0; margin-bottom:-20px;}
 }
@@ -192,3 +195,6 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 
 #googlemap {width:50%; height:100vh; display:inline-block; }
 @media screen and (max-width: 750px) {#googlemap {width:100%; }}
+
+
+
