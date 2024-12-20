@@ -74,6 +74,7 @@ h1 {font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Cambri
 #menu {z-index:100; width:100%; background:var(--marron2); padding:25px 0; color:white; font-weight:400; font-size:16px; text-align:center; }
 #menu div, #menu a {margin:1px 15px; color:white; vertical-align:middle; display:inline-block; }
 #menu span:hover, #menu a:hover {cursor:pointer; text-decoration:underline;  }
+#menu img {width:25px;margin-right:-25px;}
 
 #menumobile1 {position:absolute; left:25px;}
 #menumobile2 {position:absolute; right:25px;}
